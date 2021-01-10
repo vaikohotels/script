@@ -30,15 +30,13 @@ body {
 ul,
 ol {
     outline: none;
-    margin: 0;
-    padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 ul,
 ol {
-    list-style: none;
+    
 }
 
 .h1,
@@ -88,6 +86,48 @@ a {
     outline: none;
 }
 
+
+.custom_card {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    .card_head {
+        h2 {
+            background: rgb(231, 245, 239);
+            padding: 15px 25px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 20px 20px 0px 0px;
+            border-bottom: 0.1rem solid #e8f3ff;
+        }
+        h3{
+            padding: 15px 25px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 20px 20px 0px 0px;
+            background: $white;
+            border-bottom: 0.1rem solid #e8f3ff;
+        }
+    }
+    .card_body {
+        padding: 20px 25px;
+        background: $white;
+        border-radius: 0px 0px 20px 20px;
+        h2{
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        ul{
+            li{
+                font-size: 14px;
+            }
+        }
+    }
+}
 
 
 
