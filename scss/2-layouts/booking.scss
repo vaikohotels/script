@@ -1,0 +1,400 @@
+@import "../0-base/base";
+@import "../1-modules/header";
+@import "../1-modules/submenu_other";
+@import "../1-modules/mob_header_home";
+@import "../1-modules/footer";
+@import "../1-modules/mob_menu_bottom";
+
+.top_section {
+    height: 20vh;
+    background: linear-gradient(135.46deg, #d11450, #df293a);
+}
+
+.booking_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .fa-angle-down {
+            border-radius: 100%;
+            border: 1px solid #ccc;
+            padding: 6px;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    }
+
+    .booking_left_container {
+        flex: 0 0 68%;
+        position: relative;
+        top: -100px;
+        @media (max-width: $break-xsm) {
+            flex: 0 0 100%;
+        }
+        h2 {
+            font-size: $font-22;
+            font-weight: bold;
+            padding: 5px 0px;
+        }
+        .card {
+            border-radius: 1.2rem;
+            .card-header {
+                border: none;
+            }
+            .card-body {
+                .hotel_details {
+                    .hotel_name_wrapper {
+                        display: flex;
+                        flex-wrap: wrap;
+                        .hotel_image {
+                            flex: 0 0 10%;
+                            img {
+                                width: 139px;
+                                height: 100px;
+                                object-fit: cover;
+                                border-radius: 1.2rem;
+                            }
+                        }
+                        .hotel_name {
+                            flex: 0 0 80%;
+                            padding: 0px 20px;
+                            h4 {
+                                font-weight: bold;
+                                font-size: $font-20;
+                            }
+                            .fa-star {
+                                color: gold;
+                            }
+                        }
+                    }
+                    .check_in_details {
+                        display: flex;
+                        align-items: center;
+                        background: rgb(232, 243, 255);
+                        padding: 16px;
+                        border-radius: 1.2rem;
+                        margin: 16px 0;
+                        flex-wrap: wrap;
+                        .box {
+                            margin-right: 25px;
+                        }
+                        .heading_title {
+                            color: rgb(119, 119, 119);
+                            font-size: $font-12;
+                        }
+                        p {
+                            font-size: $font-16;
+                            font-weight: 600;
+                        }
+                    }
+                    .check_in_notes {
+                        border-radius: 1.5rem;
+                        border: 1px solid #ccc;
+                        h4 {
+                            font-weight: bold;
+                            font-size: 14px;
+                            border-bottom: 1px solid #ccc;
+                            padding: 11px 16px;
+                        }
+                        .heading_title {
+                            color: rgb(119, 119, 119);
+                            font-size: $font-12;
+                        }
+                        .desc {
+                            padding: 9px 16px;
+                        }
+                        .non_refund {
+                            color: #f00;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .hotel_info {
+            background: $white;
+            border-radius: 1.2rem;
+            margin: 0px 0 20px 0;
+        }
+
+        .guest_details {
+            background: $white;
+            border-radius: 1.2rem;
+            margin: 0px 0 20px 0;
+            .card {
+                .card-header {
+                }
+                .card-body {
+                    .guest_details_container {
+                        .guest_wrapper {
+                            display: flex;
+                            flex-wrap: wrap;
+                            div {
+                                margin: 0px 10px;
+                                span {
+                                    display: block;
+                                    color: rgb(20, 24, 35);
+                                }
+                                select {
+                                    height: 40px;
+                                    width: 70px;
+                                    border: 0.1rem solid rgb(239, 243, 248);
+                                }
+                            }
+                            input {
+                                height: 40px;
+                                padding: 10px 5px;
+                                border: 0.1rem solid rgb(239, 243, 248);
+                            }
+                        }
+                        .email_wrap {
+                            padding: 20px 10px 0px;
+                            p {
+                                margin-bottom: 10px;
+                            }
+                            input {
+                                height: 40px;
+                                padding: 10px 5px;
+                                border: 0.1rem solid rgb(239, 243, 248);
+                            }
+                        }
+                        .mob_wrap {
+                            padding: 20px 10px 0px;
+                            p {
+                                margin-bottom: 10px;
+                            }
+                            select {
+                                height: 40px;
+                                padding: 10px 5px;
+                            }
+                            input {
+                                height: 40px;
+                                padding: 10px 5px;
+                                border: 0.1rem solid rgb(239, 243, 248);
+                            }
+                        }
+                        .exptime_wrap {
+                            padding: 20px 10px 0px;
+                            p {
+                                margin-bottom: 10px;
+                            }
+                            select {
+                                height: 40px;
+                                padding: 10px 5px;
+                                border: 0.1rem solid rgb(239, 243, 248);
+                            }
+                        }
+                        .gst_details {
+                            padding: 20px 27px 0px;
+                        }
+                    }
+                    .business_wrapper {
+                        h1 {
+                            font-size: 18px;
+                            margin: 30px 0px 0px 0px;
+                            font-weight: 600;
+                        }
+                        .business_container {
+                            .box {
+                                display: flex;
+                                align-items: center;
+                                padding-bottom: 20px;
+                                padding-top: 20px;
+                                border-bottom: 1px solid #f5f5f5;
+                                div {
+                                    margin: 0 15px 0 0;
+                                }
+                                span {
+                                    display: block;
+                                    margin-bottom: 8px;
+                                }
+                                input {
+                                    height: 40px;
+                                    padding: 9px 10px;
+                                    border: 0.1rem solid #eff3f8;
+                                }
+                                textarea {
+                                    width: 690px;
+                                    height: 160px;
+                                    border: 0.1rem solid #eff3f8;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .select_request {
+            background: $white;
+            border-radius: 1.2rem;
+            margin: 0px 0 20px 0;
+            .card-body {
+                .special_req {
+                    h3 {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                    p {
+                        margin-top: 5px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        .select_payment_option {
+            background: $white;
+            border-radius: 1.2rem;
+            margin: 0px 0 20px 0;
+        }
+    }
+
+    .proceed_btn {
+        width: 100%;
+        border-radius: 1.2rem;
+        background: rgb(255, 109, 56);
+        color: $white;
+        padding: 20px;
+        border: 1px solid rgb(255, 109, 56);
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 20px;
+        &:hover {
+            background: rgb(226, 89, 39);
+        }
+        &:focus {
+            box-shadow: none;
+            outline: none;
+        }
+    }
+
+    .booking_right_container {
+        flex: 0 0 30%;
+        position: relative;
+        top: -100px;
+        @media (max-width: $break-xsm) {
+            flex: 0 0 100%;
+        }
+        h2 {
+            font-size: $font-22;
+            font-weight: bold;
+        }
+        .card {
+            border-radius: 1.2rem;
+        }
+        .price_summary {
+            background: $white;
+            border-radius: 1.2rem;
+            margin: 0px 0 20px 0;
+            .price_summary_container {
+                .price_box {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    p {
+                        padding: 9px 0;
+                        strong {
+                            font-size: 18px;
+                        }
+                    }
+                    &:nth-child(2) {
+                        border-bottom: 1px solid #ccc;
+                    }
+                    &:nth-child(4) {
+                        border-bottom: 1px solid #ccc;
+                    }
+                }
+                .offer_login {
+                    background: #e9f6ea;
+                    padding: 14px;
+                    margin-left: -20px;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        border-top: 2rem solid transparent;
+                        border-bottom: 2rem solid transparent;
+                        position: absolute;
+                        border-left: 0.8rem solid rgb(233, 246, 234);
+                        right: -0.8rem;
+                        top: 0px;
+                    }
+                    a {
+                        font-size: 18px;
+                    }
+                }
+                .offer_emi {
+                    padding: 10px 0;
+                }
+            }
+        }
+        .offers {
+            background: $white;
+            border-radius: 1.2rem;
+            margin: 0px 0 20px 0;
+            .promo_container {
+                .promo_applied_box {
+                    border: 0.1rem solid rgb(239, 243, 248);
+                    border-radius: 1.2rem;
+                    margin-bottom: 10px;
+                    &:nth-last-child() {
+                        margin-bottom: 0;
+                    }
+                    .promo_head {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 10px;
+                        border-bottom: 0.1rem solid rgb(239, 243, 248);
+                        p {
+                            strong {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                    .promo_body {
+                        padding: 10px;
+                        p {
+                            font-weight: bold;
+                            font-size: 14px;
+                            color: rgb(24, 161, 96);
+                        }
+                    }
+                    .promo_body_input {
+                        padding: 10px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex-wrap: wrap;
+
+                        input {
+                            border-top: none;
+                            border-left: none;
+                            border-right: none;
+                            border-bottom: 0.1rem solid rgb(239, 243, 248);
+                            height: 40px;
+                            width: 100%;
+                            flex: 0 0 70%;
+                        }
+                        .apply {
+                            background: #2274e0;
+                            color: #fff;
+                            border: 1px solid #2274e0;
+                            padding: 3px 13px;
+                            font-size: 14px;
+                            font-weight: 600;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

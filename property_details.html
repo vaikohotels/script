@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> Property Details | OYO</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- End Favicons -->
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <!-- End Fontawesome -->
+
+    <!-- Css Files -->
+    <link href="css/base/bootstrap.css" rel="stylesheet" />
+    <link href="css/base/owl.carousel.css" rel="stylesheet" />
+    <link href="css/2-layouts/property_details.css" rel="stylesheet" />
+    <!-- End Css Files -->
+
+</head>
+
+<body>
+    <div class="onscroll_form">
+        <div class="onscroll_logo">
+            <img src="img/logo.png" alt="logo">
+        </div>
+        <div class="onscroll_form_wrapper">
+            <form>
+                <div class="onscroll_search_loc">
+                    <input type="text" placeholder="Search by city, hotel, or neighboborhood ">
+                    <div class="nearby_component" onclick="getLocation()"><span class="nearby_component_text"><img
+                                src="img/target.png" alt="target"> Near me</span></div>
+                </div>
+                <div class="onscroll_range">
+                    <input type="text" name="daterange" value="01/01/2018 - 01/15/2018">
+                </div>
+                <div class="onscroll_guest">
+                    <input type="text" value="" readonly />
+
+                </div>
+                <div class="onscroll_submit">
+                    <button class="btn btn-primary">Search</button>
+                </div>
+            </form>
+        </div>
+        <div class="onscroll_langauge_select">
+            <div class="dropdown">
+                <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-globe"></i>
+                </span>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">English</a>
+                    <a class="dropdown-item" href="#">Español</a>
+                    <a class="dropdown-item" href="#">Bahasa</a>
+                    <a class="dropdown-item" href="#">Arabic</a>
+                    <a class="dropdown-item" href="#">Vietnamese</a>
+                    <a class="dropdown-item" href="#">Japanese</a>
+                    <a class="dropdown-item" href="#">Português</a>
+                </div>
+            </div>
+        </div>
+        <div class="onscroll_login">
+            <!-- <a href="javascript:;"><i class="far fa-user-circle"></i> Welcome, Aman</a> -->
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Welcome, Aman
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">My Bookings</a>
+                    <a class="dropdown-item" href="#">My Profile</a>
+                    <a class="dropdown-item" href="#">+91 8800 366 374</a>
+                    <a class="dropdown-item" href="#">24*7 Support</a>
+                    <a class="dropdown-item" href="#">About Us</a>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="custom_container">
+        <div class="property_wrapper">
+            <div class="bredcrumbs">
+                <a href="javascript:;" class="bredcrumbs_link">Goibibo</a>
+                <a href="javascript:;" class="bredcrumbs_link">Hotel Booking</a>
+                <a href="javascript:;" class="bredcrumbs_link">India</a>
+            </div>
+        </div>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <div class="property_heading_container">
+            <div class="property_heading">
+                <h1>Country Inn & Suites by Radisson, Candolim Goa</h1>
+                <p class="property_address">Bamonvaddo, Candolim,Bardez- Goa - 403515 <a href="javascript:;">View on
+                        Map</a>
+                </p>
+            </div>
+            <div class="rating_container">
+                <p class="rating">4.1 <span>1087 RATINGS</span></p>
+                <p>In top 5% properties of Candolim Area</p>
+            </div>
+        </div>
+
+        <div class="property_slider_wrapper">
+
+            <div class="property_slider_container">
+                <div class="image_wrapper">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://cdn1.goibibo.com/voy_ing/t_g/5d53235aad1c11e887c00a035d9f8d84.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://cdn1.goibibo.com/voy_ing/t_g/5d53235aad1c11e887c00a035d9f8d84.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://cdn1.goibibo.com/voy_ing/t_g/5d53235aad1c11e887c00a035d9f8d84.jpg"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="aminities_wrapper">
+                    <h4>Amenities & Services</h4>
+                    <div class="ame_top_box">
+                        <p>Doctor On Call</p>
+                        <p>Air Conditioning</p>
+                        <p>Safety authorization certificate</p>
+                        <p>Banquet hall</p>
+                        <a href="javascript:;">View all amenities</a>
+                    </div>
+                    <div class="time_container">
+                        <div>
+                            <span>Check-in</span>
+                            <p>02:00 PM</p>
+                        </div>
+                        <div>
+                            <span>Check-out</span>
+                            <p>11:00 AM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offer_price_section">
+                <h4>Free BreakFast Available</h4>
+                <div>
+                    <span>Login & Get</span>
+                    <p>The Best Deals & Prices</p>
+                </div>
+                <div class="price_container">
+                    <span>price starts at</span>
+                    <div class="price_wrapper">
+                        <div>
+                            <p>6305</p>
+                            <span>1142 taxes & fees per room / night</span>
+                        </div>
+                        <div>
+                            <p>1 x Guest</p>
+                            <p>1 x Room</p>
+                        </div>
+                    </div>
+                </div>
+                <button>View 11 Room Options</button>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <div class="property_nav">
+        <div class="custom_container">
+            <a href="javascript:;" class="links active">Safty & Hygiene</a>
+            <a href="javascript:;" class="links">Room options</a>
+            <a href="javascript:;" class="links">Amenities</a>
+            <a href="javascript:;" class="links">Guest Reviews</a>
+            <a href="javascript:;" class="links">Hotel Policies</a>
+            <a href="javascript:;" class="links">Location</a>
+            <a href="javascript:;" class="links">About Property</a>
+            <a href="javascript:;" class="links">Similar Hotel</a>
+        </div>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus odio omnis expedita quasi id velit, at suscipit
+        praesentium quae mollitia dolor impedit ab, eaque tempora, ipsum beatae sed placeat iste.
+        Nulla non voluptates commodi blanditiis eum officiis modi natus. Voluptates tenetur saepe obcaecati
+        reprehenderit ipsam, nostrum quod. Enim id, itaque, iusto exercitationem nesciunt debitis modi quidem obcaecati
+        aperiam eveniet voluptates?
+        Quos non nobis sapiente eum, saepe voluptates praesentium illo! Suscipit fuga eligendi voluptas dolorem eum
+        dolores inventore culpa quibusdam minus, et vel non. Harum ipsa expedita amet! Maiores, aperiam porro?
+        Fuga saepe et autem quo explicabo architecto reiciendis voluptate libero natus placeat ipsum dolor facere
+        distinctio iusto, voluptatum omnis aut. Minus facilis iusto excepturi ea vel blanditiis et odio voluptatem?
+        Soluta accusamus doloremque quasi sit nostrum fugiat fuga earum. Iure quisquam reprehenderit, excepturi maiores
+        ut nam eius quia numquam autem laudantium dolorum sit molestias commodi, aperiam eos odio aut nesciunt!
+        Iusto corporis eos consectetur omnis necessitatibus sequi autem, quas at iure atque itaque perspiciatis beatae
+        nihil nobis. Dicta voluptatum minima beatae rem dolorum distinctio aperiam. Neque, quae magni. Expedita, vero.
+        Animi temporibus similique exercitationem qui nostrum enim ipsum dolore quibusdam saepe ad, aspernatur, illo
+        deleniti at possimus impedit voluptatibus magnam deserunt odio harum molestiae? Laboriosam iusto atque quidem
+        tenetur sint!
+        Itaque veritatis repellat optio alias commodi? Harum porro sapiente perspiciatis, doloremque, ducimus illo
+        eligendi animi, quam minima ratione impedit maxime iusto hic rerum repellat iste rem natus dolore soluta at?
+        Ea animi explicabo saepe at omnis placeat unde ad. Quae obcaecati quisquam mollitia minima quibusdam at, amet
+        vero vitae, porro, provident voluptatum. Quos a itaque optio. Excepturi voluptates quas dicta?
+        Itaque quis reiciendis harum nisi, maxime quaerat ipsa quia placeat commodi voluptatem in debitis, atque fuga,
+        dolorem non eos. Iusto quisquam aperiam ea magnam natus hic veritatis aliquid mollitia provident.
+        Nostrum dolor animi inventore excepturi vitae non rerum exercitationem! Totam alias quam odio quos sint facere
+        repellat voluptates. Debitis, suscipit. Fuga rerum consequuntur excepturi explicabo, laudantium porro hic autem
+        quod.
+        Distinctio, necessitatibus illum. Repellat sint dolorem exercitationem, rerum explicabo nesciunt, ipsum
+        blanditiis animi corrupti enim, officia cum aliquid earum minima ab fugit eligendi laborum laudantium accusamus
+        distinctio expedita ad. Adipisci.
+        Minima doloribus distinctio debitis ex aperiam quas, quasi eum vel adipisci facere at voluptas quia laudantium
+        dolorem optio reiciendis reprehenderit nesciunt dicta facilis beatae atque? Necessitatibus placeat veniam
+        eveniet earum!
+        Ab, aspernatur consequuntur recusandae distinctio vero unde assumenda eveniet impedit repellendus quo excepturi
+        architecto, sunt, numquam placeat obcaecati quis molestias omnis doloremque fugit tempora est voluptatum dolore
+        atque. Consequuntur, neque.
+        Numquam distinctio id quo pariatur nobis ipsa, temporibus mollitia modi aut fuga facilis commodi aperiam vero
+        deserunt itaque consequuntur ab quibusdam consequatur ipsam dicta dolorem sapiente, ex adipisci porro. Nam.
+        Consequatur a, soluta modi incidunt quo quisquam ipsum, hic dolorum sapiente, dicta molestias laborum eum quae
+        libero enim aperiam nam nemo qui possimus eos officiis doloremque omnis! Illum, soluta adipisci.
+        Ab possimus eligendi eveniet consequatur, vero laborum nisi molestiae facilis sint dolore labore quis
+        repudiandae reprehenderit quas? Ab, fugiat doloribus nobis minima repudiandae, dolor molestias cum quidem
+        tempora deleniti velit!
+        Hic repellat consequatur dicta iusto sint ea amet ab! Ut facere a labore laboriosam eius in, beatae modi, autem
+        nisi, quos quas maiores voluptatibus quis dolore ullam. Minima, voluptas asperiores!
+        Dolore illum numquam modi nulla consectetur! Excepturi a, nesciunt blanditiis beatae corporis distinctio nulla
+        autem, ipsam deserunt eveniet neque. Ullam officiis incidunt totam quibusdam provident accusamus reprehenderit
+        impedit distinctio repellendus!
+        Odit vero ipsam ipsa architecto, quibusdam atque fugiat molestias ratione quod accusamus aliquid, voluptatum
+        nemo ducimus voluptates perspiciatis, repellat a quaerat! Illum saepe unde aliquam? Dolore aperiam repellat
+        soluta quas!
+        Maxime mollitia, neque possimus tempore ullam, facilis odit nesciunt cum praesentium eum libero non architecto
+        harum repellat? Provident, possimus. Ipsum aliquid et iusto voluptatum distinctio! Molestiae nemo officiis ipsa
+        fuga?
+        Culpa sint saepe voluptates, iusto pariatur corporis asperiores quam, quia rem nesciunt velit alias ad hic
+        doloremque cum quidem. Eum error nisi animi quaerat omnis, accusantium eos eius nihil aliquid.
+        Earum, ipsa. Quas nobis maiores repudiandae dolorum animi voluptatum, vitae inventore minima rerum
+        necessitatibus, ullam amet, velit illo assumenda at eaque harum a numquam ratione. Animi rem dolor quisquam
+        enim!
+        Aliquam doloremque dolorem nobis aliquid! Quos, eius laboriosam? Ab asperiores voluptas excepturi sed nostrum
+        molestiae natus impedit eum, neque animi, iste eveniet fugiat ipsam consequatur aspernatur nihil dolor! Nam,
+        molestiae!
+        Odio velit incidunt dolorem beatae ducimus, praesentium commodi obcaecati recusandae aliquid qui sunt atque
+        veritatis cumque. Illo, odit totam accusantium earum porro, repellat asperiores maiores similique quo delectus
+        voluptates alias.
+        Pariatur dolorem itaque dignissimos vero. Asperiores voluptatum magni, illum veritatis impedit expedita odit
+        quaerat nostrum quam, nesciunt corporis, soluta qui dignissimos vel sequi explicabo reiciendis! Iste in quo
+        voluptatum facilis.
+        Totam at impedit expedita illo non, dignissimos dolorum dolore provident nesciunt aperiam, itaque voluptate!
+        Quod ea reprehenderit eum error enim aspernatur numquam ex debitis deserunt praesentium, consequuntur
+        consectetur modi cupiditate!
+        Obcaecati, minima dolore quia possimus voluptate repudiandae laborum! Consectetur quo, repellendus aperiam
+        provident quod ratione necessitatibus obcaecati? Atque, corporis. Repellendus ipsa, blanditiis est distinctio
+        cupiditate nesciunt corrupti delectus voluptatum praesentium.
+        Maiores, cumque. Voluptatum velit quaerat dolorem, modi laboriosam eius quod nam expedita adipisci laborum,
+        beatae libero id eum ab quam? Qui fugit unde repellat aspernatur expedita amet corrupti tempora culpa!
+        Architecto perspiciatis minus nemo quaerat harum culpa. Accusantium dolorum dolorem deleniti? Numquam est,
+        repellat nostrum autem illum mollitia. Fugit, dolorum ducimus officiis autem earum odio voluptas dicta tenetur.
+        Illo, molestias!
+        Sapiente non eligendi sint, dolores voluptate unde perspiciatis tempore maiores asperiores, doloribus,
+        reiciendis modi earum quo odit delectus magnam dolor rerum odio ipsum sequi deserunt provident quisquam ad?
+        Enim, necessitatibus!
+        Aliquam odio voluptate voluptatem accusantium magni rerum dolorem exercitationem non facilis enim quae molestias
+        dolore, reiciendis illum eligendi quod inventore obcaecati perspiciatis delectus ad velit? Voluptas nihil magni
+        ullam earum!
+        Vero dolores debitis voluptate assumenda libero, perferendis fugit sequi dolor. Neque omnis aspernatur
+        temporibus eos est totam harum, excepturi sint porro necessitatibus nostrum fugit explicabo voluptatibus quod
+        officiis dolore eligendi.
+        Veniam atque quaerat autem fuga omnis, quisquam aliquid quas cum doloribus architecto qui facere odit incidunt
+        dolores, deserunt voluptates vitae impedit, vero magnam officia! Aspernatur, dolor veniam. Quo, cumque tempore?
+        Eos quam quisquam nam eveniet odit amet accusantium corrupti esse architecto, ipsum qui vel veritatis ipsa
+        facilis praesentium magni, error minus temporibus illum, iste ducimus. Earum necessitatibus vero tempore iste?
+        Aliquam rem eaque amet commodi? Ipsa voluptatem ut tempore aperiam cumque asperiores, fuga, aliquid cum
+        accusantium aspernatur provident dolor maiores tempora eius non, laborum hic dignissimos illo? Dolores, amet
+        ipsam.
+        Ipsum velit totam natus, repellat vel est repudiandae excepturi delectus enim deserunt ipsa quia magnam
+        perferendis nesciunt quos quasi quae aspernatur sint magni rem omnis minus distinctio unde. Provident, mollitia?
+        Aspernatur inventore maxime eum? Sunt, voluptatem. Laborum ea officia sit accusantium fuga. Blanditiis
+        dignissimos eum porro nulla earum iusto harum labore maxime eos soluta, ex aut itaque sint corrupti ipsum.
+        Quam eveniet quod odit tempore repudiandae harum minus aliquam consequuntur quis nostrum? Obcaecati rerum,
+        delectus repudiandae voluptates tenetur molestiae eligendi, ad, doloribus necessitatibus dignissimos velit
+        dolore facere commodi eum laudantium.
+        Tempore expedita atque debitis quam, molestiae laborum dolorum sit qui, ad asperiores, quod esse nisi delectus
+        totam quae? Illo ducimus voluptatum facere tempora corrupti culpa necessitatibus labore nemo sit aut.
+        Quia illum, nam eum libero eos iusto ut quo soluta atque nemo incidunt, perspiciatis obcaecati corrupti
+        voluptate expedita. Soluta vero natus blanditiis adipisci officiis doloremque aspernatur magni voluptates
+        nostrum perspiciatis?
+        Sunt, ut quae itaque vitae, nihil quis nulla enim labore, maiores modi molestiae architecto cumque error officia
+        ullam debitis quidem nisi minus laudantium? Tenetur minima facere rem neque quasi harum!
+        Esse vel labore, quo nihil libero distinctio cum eum fugit officia ab debitis possimus sapiente illo quisquam
+        architecto perferendis voluptatem accusantium qui sit error ea quas voluptates? Error, ex quae.
+        Sint eaque, eos ea, corrupti vitae laboriosam, iste corporis voluptas doloribus maiores earum fuga ipsa debitis
+        nesciunt facere laudantium consequuntur commodi iure? Explicabo saepe maiores expedita labore autem unde
+        possimus.
+        Itaque quod obcaecati, exercitationem error, reiciendis ratione, voluptatum natus cum dignissimos consequuntur
+        reprehenderit iste accusamus illo officia laborum! Quidem nam natus libero eveniet itaque excepturi id vero,
+        nihil accusamus numquam?
+        Odio voluptates tempora magni amet ea minima ad numquam enim officiis. Possimus ipsa atque animi eveniet
+        voluptate praesentium nihil rerum aperiam quae repudiandae eius molestias, odit sunt ducimus culpa dolor.
+        Sed adipisci sunt hic sapiente modi harum rem fuga minima maiores, ut, nulla tempora soluta. Ducimus aut
+        recusandae atque, tenetur numquam soluta magni enim eveniet repellat mollitia eaque nam neque!
+        Non voluptatibus laudantium aliquid ratione? A consequatur laudantium id quis voluptatum. Laudantium, voluptatem
+        ab eius ad deleniti esse in soluta odit iure, explicabo, repudiandae magni alias non quo dicta hic.
+        Odit sunt dolores quae recusandae voluptates sequi corrupti laudantium, quidem quos expedita cumque culpa,
+        mollitia deleniti eos excepturi in. Non harum magnam saepe facere ut quod laudantium esse incidunt inventore?
+        Cupiditate veritatis officiis magnam quae quasi obcaecati! Impedit ea earum ipsum minus quos, nostrum ab
+        reiciendis natus? Commodi, corrupti eveniet qui voluptate facere ut. Sequi accusantium rem nihil deleniti ad.
+        Vel voluptatibus adipisci quisquam molestiae accusamus. Aliquam, odit blanditiis. Maiores eaque expedita eum
+        itaque quisquam accusantium, nisi, veritatis mollitia molestias, laboriosam rerum dicta et asperiores facere
+        cumque ratione voluptates quas.
+        Dolore voluptates molestias, magnam voluptatibus iure ratione officia repudiandae iste, cupiditate minus,
+        suscipit ad. Illo neque ad quibusdam quisquam iste obcaecati nulla voluptas, itaque unde recusandae
+        exercitationem nobis ipsa at.
+        Voluptatibus voluptatem atque, fuga sunt natus in, nobis rem omnis cupiditate exercitationem ex quam distinctio?
+        Aliquid veritatis excepturi consequatur recusandae, a, voluptate ea quod perferendis quia aspernatur modi porro
+        dolores!
+        Dicta, in? Quibusdam debitis, in ab quae rem consequatur impedit nobis quaerat sunt suscipit eos ipsum qui
+        recusandae? Suscipit rem mollitia temporibus exercitationem nihil voluptas ipsam, qui similique voluptatem iure!
+        Vero velit, praesentium obcaecati deleniti culpa fuga quis nobis deserunt quasi dolor maxime suscipit neque
+        iusto. Veritatis repellendus laborum recusandae exercitationem unde soluta. Omnis, cupiditate iste error
+        consequuntur aliquam nisi.
+        Reprehenderit nobis consequuntur pariatur odio rem beatae maiores unde quas quos quo! Explicabo sapiente itaque
+        aut, nihil autem quibusdam impedit similique corporis. Nostrum repudiandae iusto cupiditate laboriosam labore
+        magnam voluptatem?
+        Dicta, velit laudantium totam placeat praesentium sint sunt asperiores earum atque quidem nostrum voluptate ea
+        quasi harum cum tenetur nesciunt laborum nam culpa nemo ipsa? Temporibus consectetur mollitia velit molestiae.
+        Odio, qui? Minima, dolor totam. Dolore optio voluptas, nihil beatae dolorem nulla distinctio nisi explicabo. Ea,
+        eligendi atque placeat similique quos quasi molestiae nam omnis inventore possimus fugit quam perferendis.
+        Voluptate deleniti alias cumque, praesentium eum doloremque nisi necessitatibus id nostrum perspiciatis rerum
+        tempore mollitia itaque amet provident aspernatur atque delectus, optio recusandae porro repudiandae quaerat
+        placeat expedita. Voluptatibus, itaque?
+        Assumenda, in animi facilis sapiente doloremque quia eligendi laudantium quisquam quos voluptatum minima atque?
+        Assumenda totam optio provident consequuntur delectus expedita blanditiis soluta libero, eligendi saepe
+        laudantium minus quia minima?
+        Qui, hic. Veritatis id distinctio earum! Explicabo eveniet ipsam saepe cupiditate, perspiciatis iusto maxime
+        vitae. Culpa impedit, rerum maiores ducimus quos iusto recusandae voluptate animi, quas similique autem
+        doloribus adipisci.
+        Mollitia quia quod sit consectetur nesciunt, assumenda autem inventore accusantium id doloremque dolor molestias
+        tempora amet delectus quis laudantium deleniti deserunt, fuga dolore, optio quasi sapiente recusandae. Enim,
+        inventore cum.
+        Vitae blanditiis, qui tempora nam cupiditate laudantium. Nesciunt ratione placeat, ad maiores laborum harum id
+        fugiat hic aliquam libero maxime, dolore, omnis rem! Qui aperiam alias, facere architecto repellendus quam!
+        Distinctio obcaecati explicabo, perspiciatis, nam qui quaerat at non veritatis ullam dignissimos tempore illo
+        fugiat repellendus! Reiciendis quam nisi deserunt repellendus, accusamus nesciunt temporibus obcaecati maiores
+        nostrum accusantium, rem perspiciatis.
+        Aliquam, incidunt exercitationem quas facere beatae commodi error nihil facilis, iure necessitatibus voluptates
+        eos neque atque tenetur iusto sunt magnam. Repudiandae, est! Ex necessitatibus, neque voluptatibus facere quis
+        cumque esse.
+        Dolor natus aliquid itaque iste excepturi, distinctio quidem exercitationem quam eos minus repellendus labore
+        sunt, rerum deleniti voluptatibus facilis doloremque unde eligendi, ullam optio earum fugiat officiis.
+        Similique, sed. Accusantium!
+        Error, nam autem reprehenderit aut ex est deserunt at omnis eligendi ut optio inventore accusamus reiciendis
+        dicta itaque culpa atque earum quibusdam eum vero ipsa eos sit saepe? Eum, dolore.
+        Non quam at hic numquam accusamus iusto voluptatum laudantium rerum totam, modi id minima maxime rem. Eaque
+        quibusdam debitis veritatis repellendus a facere non, sint nesciunt voluptatibus adipisci eum ut.
+        Omnis facilis nobis impedit dolores, magnam rem non, repudiandae repellendus iure libero quos nesciunt ipsum ab
+        debitis! Incidunt quasi, dolorum quaerat quis modi illo inventore. Maxime ex facilis tenetur nemo!
+        Impedit nihil quibusdam consequatur, alias incidunt quos nostrum? Molestias nulla placeat facilis recusandae
+        temporibus commodi, excepturi et ratione officia! Incidunt quae, aliquid sit est nihil hic illum nostrum ratione
+        vel.
+        Ea vel quae nobis, nam inventore aut doloremque ad iusto provident vitae repellendus similique atque, delectus
+        magnam harum aspernatur corporis tempore omnis animi ex! Cum quos magnam ratione veritatis doloremque.
+        Dolor animi doloribus, enim eaque facere optio explicabo rerum quo nam provident est molestias aspernatur
+        tempore maiores qui vitae placeat cupiditate ipsa? Nemo cupiditate impedit illum iusto molestias sunt
+        consequuntur?
+        Esse porro corporis maxime ab exercitationem corrupti deserunt, explicabo voluptatibus dicta facere voluptates
+        perferendis, dolorem voluptas molestias reprehenderit illo provident libero quo est doloremque id temporibus?
+        Iste optio temporibus deleniti.
+        Reprehenderit illum cumque accusamus illo ullam. Ipsum temporibus ex veritatis. Sapiente dolorem odit optio
+        vitae velit ut soluta sit possimus deserunt autem accusamus, doloremque numquam! Laboriosam totam quisquam
+        delectus. Impedit!
+        Nam tempora molestias error expedita debitis deleniti possimus quae voluptatem, asperiores numquam vero
+        provident adipisci quibusdam reiciendis distinctio, saepe eaque perspiciatis pariatur, sed corporis nobis?
+        Tempore incidunt adipisci deserunt mollitia.
+        Repudiandae nihil voluptas similique animi, praesentium consequuntur facilis magni accusamus quibusdam a dolorum
+        itaque deleniti libero. Cum rerum, qui molestias dignissimos cupiditate, similique minus aliquam quod delectus
+        ex quas quae?
+        Architecto culpa tempora incidunt aliquam repellat cupiditate deleniti consectetur doloremque, eligendi
+        reprehenderit reiciendis, harum animi voluptate, voluptatibus possimus illo accusantium ducimus fuga. Veritatis
+        illum fugit dicta quae, hic officiis voluptate.
+        Aspernatur veritatis voluptas atque doloribus et ipsam dolore autem libero eum ipsum quae, deserunt, quas
+        deleniti. Iusto maiores cum nobis? Reiciendis cumque eveniet temporibus velit ipsam ipsa rem incidunt repellat.
+        Veniam mollitia numquam unde in quia magnam distinctio necessitatibus expedita praesentium! Vel voluptatibus
+        adipisci in cum fugit reiciendis laudantium? Vero quo eius temporibus doloremque vel facilis incidunt voluptates
+        libero quos!
+        Accusantium ipsum ad minima voluptate deleniti libero cumque pariatur quam quis possimus beatae fuga sapiente
+        voluptas, ullam aperiam quas sequi consequatur est delectus cupiditate itaque, asperiores quasi ex dolores!
+        Enim?
+        Corrupti harum quis cum minima aliquam in quod quibusdam nemo nulla omnis optio nostrum illum, tempore, fugiat
+        rem. Delectus quos quaerat distinctio pariatur, in reprehenderit deserunt reiciendis harum natus sunt.
+        Placeat quo, labore dolorum inventore quis vero tenetur laboriosam quasi hic numquam. Iure excepturi quisquam,
+        laboriosam, quidem ad odio molestiae hic neque doloribus mollitia iusto. Incidunt reiciendis cum natus nesciunt?
+        Doloribus voluptatum assumenda atque quas laborum sint blanditiis, nemo consectetur, dignissimos molestias
+        soluta excepturi ipsa harum et maxime quae natus temporibus corrupti incidunt minima ex consequuntur iusto,
+        eaque iure. Excepturi!
+        Sint atque autem sapiente impedit obcaecati? Aspernatur, quas voluptatem fuga dignissimos eius quia hic id
+        possimus. Sequi beatae temporibus, vitae ipsam commodi totam rem magnam fugit aliquam laboriosam, in doloribus!
+        Fugit voluptatum itaque minima magni impedit facere temporibus explicabo, recusandae beatae deleniti error quis
+        totam, modi nobis laborum ratione vitae cum non sequi corporis veritatis maxime! Placeat excepturi odit quae!
+        Culpa facere error expedita fugit blanditiis necessitatibus aut, magni aliquid distinctio ipsum deleniti, quia
+        quo eaque itaque eos repellendus in vel ut porro explicabo sit illum rem ad! Harum, nihil?
+        Magnam eveniet libero est dicta laborum iure, laboriosam consequatur doloribus recusandae voluptatem neque
+        mollitia officiis suscipit. Accusamus iure vitae hic, nobis dolore exercitationem saepe inventore eius animi eum
+        provident culpa.
+        Beatae tenetur voluptatem velit, accusamus rem fugit perferendis nulla ab sequi earum facilis quis reiciendis!
+        Velit facilis ullam expedita placeat laudantium mollitia, aperiam officiis, id vel totam consectetur eos minus.
+        Quos, aspernatur. Ducimus, odio! Magni eum delectus quidem laudantium ea dolorem, assumenda pariatur. Assumenda
+        fugiat, molestiae voluptatibus facilis tenetur minus vel officia magnam? Repellendus, ad quod? Placeat accusamus
+        inventore hic.
+        Facilis blanditiis necessitatibus perspiciatis labore. Quisquam quo consectetur eaque, velit, nam odio
+        asperiores temporibus ducimus, sit optio cupiditate nobis culpa ipsa totam inventore ipsum distinctio cum
+        voluptas? Dolorem, voluptatum dolorum.
+        Eum, deleniti saepe, alias labore inventore voluptatum veritatis, sint magnam animi tempora commodi. Placeat
+        voluptates nostrum suscipit nulla, quaerat molestiae vero error veritatis, impedit asperiores aperiam quo dicta
+        cumque laborum!
+        Minus fugit magnam neque molestiae recusandae fugiat non eligendi quis maiores. Architecto minus assumenda at
+        amet culpa officia, sed magni, enim dolorum cum doloremque esse voluptas dolor. Quas, asperiores deserunt.
+        Molestias velit iusto ex numquam fugit facilis ipsum asperiores consequatur ab! Doloremque rerum sequi
+        aspernatur totam assumenda qui repellat velit eveniet non ea voluptatibus, voluptates laborum quas eligendi
+        maxime provident?
+        Distinctio, dolorem, possimus optio ab ipsa iure consequatur magnam blanditiis veniam numquam similique
+        repellendus natus iusto, voluptas dicta aperiam repellat? Sapiente nulla minima commodi sequi, placeat facere
+        ipsam libero? Explicabo!
+        A eveniet pariatur cupiditate corrupti odio quos officiis excepturi ad, recusandae laborum? Autem at quibusdam
+        nesciunt consequatur temporibus, est provident error dolores repellendus expedita nam ea itaque libero esse
+        dolorem.
+        Doloremque accusantium atque, aspernatur exercitationem voluptatem sed ipsa? Illum rem vitae fugiat repellendus
+        veniam atque recusandae eius sint porro labore nobis obcaecati similique deleniti architecto maxime, ipsam
+        maiores distinctio amet?
+        A nostrum molestias nam in officiis eum cum ratione fugiat, ducimus ea, deserunt natus at repellendus temporibus
+        libero laboriosam. Eius enim cum atque necessitatibus quisquam non assumenda vel? Maxime, ipsa?
+        Ipsum, maxime sunt? Omnis sapiente suscipit hic nemo officia modi id quaerat, velit minima accusamus fugiat
+        sunt, repellendus ex, deserunt quo dolorum saepe maxime eum assumenda accusantium repellat esse. Temporibus.
+        Soluta corrupti unde maiores voluptas nesciunt, dignissimos aperiam nemo, modi quam quidem iure est doloremque
+        facere! Ipsam aliquam maiores doloribus, numquam velit, accusamus ratione totam ab tenetur quo nesciunt
+        temporibus.
+        Cumque quaerat, minima esse pariatur consectetur labore, repellendus deleniti porro quos repellat molestiae
+        totam obcaecati praesentium velit, harum culpa minus error! Nostrum veritatis quas reprehenderit odit eaque
+        quidem, architecto unde.</p>
+
+
+
+    <footer>
+        <div class="custom_container">
+            <div class="footer_quick_links">
+                <div class="quick_links_wrapper">
+
+                    <div class="quick_link_container">
+                        <div class="quick_list">
+                            <h3 class="footer_heading">Fabhotels</h3>
+                            <p><a href="javascript:;">About Us</a></p>
+                            <p><a href="javascript:;">Careers</a></p>
+                            <p><a href="javascript:;">Press</a></p>
+                            <p><a href="javascript:;">Travel Blog</a></p>
+                        </div>
+                        <div class="quick_list">
+                            <h3 class="footer_heading">Partner With Us</h3>
+                            <p><a href="javascript:;">Be our Franchisee</a></p>
+                            <p><a href="javascript:;">Travel Agent</a></p>
+                            <p><a href="javascript:;">Corporate Enquiries</a></p>
+                            <p><a href="javascript:;">Quarantine Hotels</a></p>
+                        </div>
+                        <div class="quick_list">
+                            <h3 class="footer_heading">Policies</h3>
+                            <p><a href="javascript:;">Terms & Conditions</a></p>
+                            <p><a href="javascript:;">Privacy Policy</a></p>
+                            <p><a href="javascript:;">Cancellation Policy</a></p>
+                            <p><a href="javascript:;">FAQs</a></p>
+                        </div>
+                    </div>
+
+                    <div class="secured_section">
+                        <span class="secured_by">SECURED BY <img src="img/geo-trust.png" alt="secured_by"></span>
+                        <span class="we_accept">WE ACCEPT <img src="img/paytm.png" alt="paytm"></span>
+                    </div>
+                </div>
+                <div class="app_details">
+                    <h4 class="app_heading">Download our free app</h4>
+                    <p class="downloads">(1M+ Downloads)</p>
+
+                    <div class="app_wrapper">
+                        <div class="form_container">
+                            <form>
+                                <input type="number" placeholder="Enter Mobile Number" required>
+                                <button><i class="fas fa-arrow-right"></i></button>
+                            </form>
+                            <div class="app_logo">
+                                <img src="img/google-play.png" alt="google play">
+                                <img src="img/app-store.png" alt="app store">
+                            </div>
+                        </div>
+
+                        <div class="qr_code">
+                            <p>Scan to get the link</p>
+                            <img src="img/Qrcode.jpg" alt="qrcode">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer_city_wrapper">
+                <h3 class="footer_heading">Book Our Hotels In All Three Cities</h3>
+                <div class="hotel_city_list_wrapper">
+                    <div class="hotel_city_list">
+                        <p><a href="javascript:;">Hotels Near Me</a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+                    </div>
+
+                    <div class="hotel_city_list">
+                        <p><a href="javascript:;">Hotels Near Me</a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+                    </div>
+
+                    <div class="hotel_city_list">
+                        <p><a href="javascript:;">Hotels Near Me</a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+                    </div>
+
+                    <div class="hotel_city_list">
+                        <p><a href="javascript:;">Hotels Near Me</a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+                    </div>
+
+
+                    <div class="hotel_city_list">
+                        <p><a href="javascript:;">Hotels Near Me</a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+                    </div>
+
+
+                    <div class="hotel_city_list">
+                        <p><a href="javascript:;">Hotels Near Me</a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_summary">
+                <h3 class="footer_heading">FabHotels Is Best Reviewed Hotel Chain In India</h3>
+                <p>We are the fastest growing budget hotel brand in India with over 10,000+ rooms in 600+ hotels
+                    across
+                    50+
+                    cities in India. All our rooms and hotel properties are spacious, stylish, and contemporary, and
+                    are
+                    fitted
+                    with all modern amenities so that you have a relaxed and consistent travel experience. Because
+                    we
+                    believe in
+                    going the extra mile to ensure you have a delightful stay at the best-price, wherever you go.
+                    Most
+                    of our
+                    hotel properties are located close to business hubs or popular tourist sites and easily
+                    accessible
+                    by public
+                    transport, so you don’t have to waste time or money in traveling to your place of business. But
+                    what
+                    makes us
+                    so Fab? Our team of highly enthusiastic and experienced professionals who work around the clock
+                    to
+                    ensure you
+                    get the best sleep after a long day on the road. You don’t have to take our word for it. Just
+                    read
+                    what over
+                    2,000,000+ happy customers have to say. Or better yet, book a stay with us and experience our
+                    services and
+                    hospitality for yourself. Doesn’t matter where you travel to - Whether it’s New Delhi or Ooty.
+                    With
+                    FabHotels,
+                    you will #StayFab, always!</p>
+            </div>
+            <p class="copyright center">&copy; 2020 Casa2 Stays Pvt. Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="mob_dis">
+        <div class="mob_menu_bottom">
+            <a href="/oyo/index.html" class="active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="javascript:;">
+                <i class="fas fa-heart"></i>
+                <span>Saved</span>
+            </a>
+            <a href="javascript:;">
+                <i class="fas fa-briefcase"></i>
+                <span>Bookings</span>
+            </a>
+            <a href="javascript:;">
+                <i class="fas fa-user-plus"></i>
+                <span>Invite & Earn</span>
+            </a>
+            <a href="/oyo/account_details.html">
+                <i class="fas fa-user"></i>
+                <span>Account</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".langauge_selector").click(function () {
+                $(".custom_dropdown").toggleClass("show");
+            });
+            $(".custom_dropdown li").click(function () {
+                $("li").removeClass("active");
+                $(this).addClass("active");
+            });
+            $(".sub_header_list").hover(function () {
+                $(".sub_menu", this).toggle();
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

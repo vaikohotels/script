@@ -1,11 +1,1153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>script</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> OYO: India's Best Online Hotel Booking Site for Sanitised Stays </title>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+  <link rel="manifest" href="favicon/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <!-- End Favicons -->
+
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <!-- End Fontawesome -->
+
+  <!-- Css Files -->
+  <link href="css/base/bootstrap.css" rel="stylesheet" />
+  <link href="css/base/owl.carousel.css" rel="stylesheet" />
+
+  <link href="css/2-layouts/homepage.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <!-- End Css Files -->
+
 </head>
+
 <body>
-<center>
-	<h4>welcome on github</h4>
-</center>
+  <div class="web_dis">
+    <div class="top_header">
+      <div class="logo">
+        <img src="./img/logo.png" alt="Logo" />
+      </div>
+      <div class="nav_right">
+        <div class="offer_Section">
+          <a href="javascript:;">
+            <img src="img/member.png" alt="member" />
+            <span>Become a Member
+              <small> 10% off on stays</small>
+            </span>
+          </a>
+        </div>
+        <div class="langauge_selector">
+          <span>
+            <i class="fas fa-globe"></i> English
+            <i class="fas fa-angle-down"></i>
+          </span>
+          <ul class="custom_dropdown">
+            <li class="active">
+              <a href="javascript:;">
+                <span class="lang_wrapper">English
+                  <span class="sub_lang">English (UK)</span>
+                </span>
+                <i class="fas fa-check"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="javascript:;">
+                <span class="lang_wrapper">Español
+                  <span class="sub_lang">Spanish</span>
+                </span>
+                <i class="fas fa-check"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="javascript:;">
+                <span class="lang_wrapper">Bahasa
+                  <span class="sub_lang">Bahasa</span>
+                </span>
+                <i class="fas fa-check"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="javascript:;">
+                <span class="lang_wrapper">عربى
+                  <span class="sub_lang">Arabic</span>
+                </span>
+                <i class="fas fa-check"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="javascript:;">
+                <span class="lang_wrapper">Vietnamese
+                  <span class="sub_lang">Vietnamese</span>
+                </span>
+                <i class="fas fa-check"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="javascript:;">
+                <span class="lang_wrapper">日本語
+                  <span class="sub_lang">Japanese</span>
+                </span>
+                <i class="fas fa-check"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="javascript:;">
+                <span class="lang_wrapper">Português
+                  <span class="sub_lang">Português</span>
+                </span>
+                <i class="fas fa-check"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="login_tab">
+          <a href="javascript:;" data-toggle="modal" data-target="#exampleModal"><i class="far fa-user-circle"></i>
+            Login
+            / Signup</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mob_dis">
+    <div class="mob_header">
+      <div class="mob_top">
+        <div class="mob_logo"><img src="img/logo-white.png" alt="logo" /></div>
+        <div class="login_call">
+          <a href="javascript:;"><i class="fas fa-phone"></i></a>
+          <a href="javascript:;" class="mob_login">Login</a>
+        </div>
+      </div>
+      <div class="mob_header_body">
+        <h3>Book a FabHotel <span class="mob_header_subheading">Choose from 600+ Budget Hotels in India </span></h3>
+        <div class="mob_search">
+          <form>
+            <div class="mob_search_field_container">
+              <i class="fas fa-search"></i>
+              <input type="text" placeholder="Search for city, locality or landmark" />
+            </div>
+            <div class="date_guest_container">
+              <div class="mob_date">
+                <input type="text" name="daterange" />
+              </div>
+              <div class="guest_sellect">
+                <select value="">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                </select>
+              </div>
+            </div>
+            <div class="search_button">
+              <button class="btn btn-primary">Search FabHotels</button>
+              <p>Or</p>
+              <a href="javascript:;"><i class="fas fa-location-arrow"></i> Search FabHotels Near You</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="web_dis">
+    <div class="sub_header">
+      <div class="sub_header_list">
+        <p>Banglore <i class="fas fa-angle-down"></i></p>
+        <div class="sub_menu">
+          <h2>Popular Localities</h2>
+          <a href="javascript:;">Majestic</a>
+          <a href="javascript:;">Koramangala</a>
+          <a href="javascript:;">Madiwala</a>
+          <a href="javascript:;">Hsr Layout</a>
+          <a href="javascript:;">Marathahalli</a>
+          <a href="javascript:;">Hebbal</a>
+          <a href="javascript:;">RR Nagar</a>
+          <a href="javascript:;">Jayanagar</a>
+          <a href="javascript:;">Indiranagar</a>
+          <a href="javascript:;">Electronics City</a>
+          <a href="javascript:;">All Of Banglore</a>
+        </div>
+      </div>
+
+      <div class="sub_header_list">
+        <p>Chennai <i class="fas fa-angle-down"></i></p>
+        <div class="sub_menu">
+          <h2>Popular Localities</h2>
+          <a href="/hotels-in-chennai-central-railway-station-chennai/">Chennai Central Railway Station</a><a
+            href="/hotels-in-ecr-east-coast-road-chennai/">Ecr East Coast Road</a><a
+            href="/hotels-in-anna-nagar-chennai/">Anna Nagar</a><a href="/hotels-in-t-nagar-chennai/">T Nagar</a><a
+            href="/hotels-in-guindy-chennai/">Guindy</a><a href="/hotels-in-nungambakkam-chennai/">Nungambakkam</a><a
+            href="/hotels-in-vadapalani-chennai/">Vadapalani</a><a href="/hotels-in-koyambedu-chennai/">Koyambedu</a><a
+            href="/hotels-in-chennai-international-airport-chennai/">Chennai International Airport</a><a
+            href="/hotels-in-pallikaranai-chennai/">Pallikaranai</a>
+          <a href="javascript:;">All Of Chennai</a>
+        </div>
+      </div>
+      <div class="sub_header_list">
+        <p>Delhi <i class="fas fa-angle-down"></i></p>
+        <div class="sub_menu">
+          <h2>Popular Localities</h2>
+          <a href="/hotels-in-mahipalpur-delhi/">Mahipalpur</a><a href="/hotels-in-paharganj-delhi/">Paharganj</a><a
+            href="/hotels-in-new-delhi-railway-station-delhi/">New Delhi Railway Station</a><a
+            href="/hotels-in-karol-bagh-delhi/">Karol Bagh</a><a href="/hotels-in-dwarka-new-delhi-delhi/">Dwarka, New
+            Delhi</a><a href="/hotels-in-new-delhi-delhi/">New Delhi</a><a
+            href="/hotels-in-dwarka-sector-9-delhi/">Dwarka
+            Sector 9</a><a href="/hotels-in-pitampura-delhi/">Pitampura</a><a href="/hotels-in-laxmi-nagar-delhi/">Laxmi
+            Nagar</a><a href="/hotels-in-lajpat-nagar-delhi/">Lajpat Nagar</a>
+          <a href="javascript:;">All Of Delhi</a>
+        </div>
+      </div>
+      <div class="sub_header_list">
+        <p>Gurgoan <i class="fas fa-angle-down"></i></p>
+        <div class="sub_menu">
+          <h2>Popular Localities</h2>
+          <a href="/hotels-in-huda-city-center-metro-gurgaon/">Huda City Center Metro</a><a
+            href="/hotels-in-gurgaon-bus-stand-gurgaon/">Gurgaon Bus Stand</a><a href="/hotels-in-mg-road-gurgaon/">Mg
+            Road</a><a href="/hotels-in-sector-14-gurgaon/">Sector 14</a><a href="/hotels-in-sector-29-gurgaon/">Sector
+            29</a><a href="/hotels-in-dlf-phase-3-gurgaon/">DLF Phase 3</a><a href="/hotels-in-imt-manesar-gurgaon/">Imt
+            Manesar</a><a href="/hotels-in-guru-dronacharya-metro-gurgaon/">Guru Dronacharya Metro</a><a
+            href="/hotels-in-sector-46-gurgaon/">Sector 46</a><a href="/hotels-in-gurgaon-sohna-road-gurgaon/">Gurgaon
+            Sohna Road</a>
+          <a href="javascript:;">All Of Gurgoan</a>
+        </div>
+      </div>
+      <div class="sub_header_list">
+        <p>Hyderabad <i class="fas fa-angle-down"></i></p>
+        <div class="sub_menu">
+          <h2>Popular Localities</h2>
+          <a href="/hotels-in-secunderabad-railway-station-hyderabad/">Secunderabad Railway Station</a><a
+            href="/hotels-in-madhapur-hyderabad/">Madhapur</a><a
+            href="/hotels-in-gachibowli-hyderabad/">Gachibowli</a><a
+            href="/hotels-in-kukatpally-hyderabad/">Kukatpally</a><a href="/hotels-in-lb-nagar-hyderabad/">LB
+            Nagar</a><a href="/hotels-in-rajiv-gandhi-international-airport-hyderabad/">Rajiv Gandhi International
+            Airport</a><a href="/hotels-in-ameerpet-hyderabad/">Ameerpet</a><a
+            href="/hotels-in-kondapur-hyderabad/">Kondapur</a><a href="/hotels-in-banjara-hills-hyderabad/">Banjara
+            Hills</a><a href="/hotels-in-hitech-city-hyderabad/">Hitech
+            City</a>
+          <a href="javascript:;">All Of Hyderabad</a>
+        </div>
+      </div>
+
+      <div class="sub_header_list">
+        <p>Kolkata <i class="fas fa-angle-down"></i></p>
+        <div class="sub_menu">
+          <h2>Popular Localities</h2>
+          <a href="/hotels-in-howrah-railway-station-kolkata/">Howrah Railway Station</a><a
+            href="/hotels-in-salt-lake-city-kolkata/">Salt Lake City</a><a href="/hotels-in-new-town-kolkata/">New
+            Town</a><a href="/hotels-in-park-street-kolkata/">Park Street</a><a
+            href="/hotels-in-sealdah-railway-station-kolkata/">Sealdah Railway Station</a><a
+            href="/hotels-in-kolkata-international-airport-kolkata/">Kolkata International Airport</a><a
+            href="/hotels-in-esplanade-metro-station-kolkata/">Esplanade Metro Station</a><a
+            href="/hotels-in-mukundapur-kolkata/">Mukundapur</a><a
+            href="/hotels-in-sector-5-salt-lake-city-kolkata/">Sector 5 Salt Lake City</a><a
+            href="/hotels-in-dum-dum-kolkata/">Dum Dum</a>
+          <a href="javascript:;">All Of Kolkata</a>
+        </div>
+      </div>
+
+      <div class="sub_header_list">
+        <p>Mumbai <i class="fas fa-angle-down"></i></p>
+        <div class="sub_menu">
+          <h2>Popular Localities</h2>
+          <a href="/hotels-in-andheri-east-mumbai/">Andheri East</a><a href="/hotels-in-vashi-mumbai/">Vashi</a><a
+            href="/hotels-in-thane-mumbai/">Thane</a><a href="/hotels-in-panvel-mumbai/">Panvel</a><a
+            href="/hotels-in-dadar-mumbai/">Dadar</a><a href="/hotels-in-bandra-mumbai/">Bandra</a><a
+            href="/hotels-in-navi-mumbai-mumbai/">Navi Mumbai</a><a href="/hotels-in-powai-mumbai/">Powai</a><a
+            href="/hotels-in-malad-west-mumbai/">Malad West</a><a href="/hotels-in-andheri-mumbai/">Andheri</a>
+          <a href="javascript:;">All Of Mumbai</a>
+        </div>
+      </div>
+
+      <div class="sub_header_list">
+        <p>Noida <i class="fas fa-angle-down"></i></p>
+        <div class="sub_menu">
+          <h2>Popular Localities</h2>
+          <a href="/hotels-in-sector-18-noida/">Sector 18</a><a href="/hotels-in-sector-62-noida/">Sector 62</a><a
+            href="/hotels-in-pari-chowk-noida/">Pari Chowk</a><a href="/hotels-in-greater-noida-noida/">Greater
+            Noida</a><a href="/hotels-in-sector-15-noida/">Sector 15</a><a href="/hotels-in-sector-63-noida/">Sector
+            63</a><a href="/hotels-in-sector-51-noida/">Sector 51</a><a href="/hotels-in-gaziabad-noida/">Gaziabad</a><a
+            href="/hotels-in-surajpur-noida/">Surajpur</a><a href="/hotels-in-botanical-garden-noida/">Botanical
+            Garden</a>
+          <a href="javascript:;">All Of Noida</a>
+        </div>
+      </div>
+
+      <div class="sub_header_list">
+        <p>Pune <i class="fas fa-angle-down"></i></p>
+        <div class="sub_menu">
+          <h2>Popular Localities</h2>
+          <a href="/hotels-in-pimpri-chinchwad-pune/">Pimpri Chinchwad</a><a
+            href="/hotels-in-pune-railway-station-pune/">Pune Railway Station</a><a
+            href="/hotels-in-viman-nagar-pune/">Viman Nagar</a><a href="/hotels-in-baner-pune/">Baner</a><a
+            href="/hotels-in-shivaji-nagar-pune/">Shivaji Nagar</a><a href="/hotels-in-hadapsar-pune/">Hadapsar</a><a
+            href="/hotels-in-kharadi-pune/">Kharadi</a><a href="/hotels-in-wakad-pune/">Wakad</a><a
+            href="/hotels-in-koregaon-park-pune/">Koregaon Park</a><a href="/hotels-in-deccan-gymkhana-pune/">Deccan
+            Gymkhana</a>
+          <a href="javascript:;">All Of Pune</a>
+        </div>
+      </div>
+
+      <div class="sub_header_list">
+        <p>All Cities.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="onscroll_form">
+    <div class="onscroll_logo">
+      <img src="img/logo.png" alt="logo">
+    </div>
+    <div class="onscroll_form_wrapper">
+      <form>
+        <div class="onscroll_search_loc">
+          <input type="text" placeholder="Search by city, hotel, or neighboborhood ">
+          <div class="nearby_component" onclick="getLocation()"><span class="nearby_component_text"><img
+                src="img/target.png" alt="target"> Near me</span></div>
+        </div>
+        <div class="onscroll_range">
+          <input type="text" name="daterange" value="01/01/2018 - 01/15/2018">
+        </div>
+        <div class="onscroll_guest">
+          <input type="text" value="" readonly />
+
+        </div>
+        <div class="onscroll_submit">
+          <button class="btn btn-primary">Search</button>
+        </div>
+      </form>
+    </div>
+    <div class="onscroll_langauge_select">
+      <div class="dropdown">
+        <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-globe"></i>
+        </span>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">English</a>
+          <a class="dropdown-item" href="#">Español</a>
+          <a class="dropdown-item" href="#">Bahasa</a>
+          <a class="dropdown-item" href="#">Arabic</a>
+          <a class="dropdown-item" href="#">Vietnamese</a>
+          <a class="dropdown-item" href="#">Japanese</a>
+          <a class="dropdown-item" href="#">Português</a>
+        </div>
+      </div>
+    </div>
+    <div class="onscroll_login">
+      <a href="javascript:;"><i class="far fa-user-circle"></i> Login / Signup</a>
+    </div>
+  </div>
+
+
+
+  <div class="web_dis">
+    <div class="search_banner">
+      <img src="img/search-back.png" class="image_one" alt="search back">
+      <img src="img/search-back2.png" class="image_two" alt="search back">
+      <div class="container-fluid container_wrapper">
+        <h1 class="center">World's Fastest Growing Hotel Chain</h1>
+        <div class="search">
+          <form class="custom_form" method="POST">
+            <div class="form-group search_city">
+              <input type="text" class="form-control" placeholder="Search by city, hotel, or neighboborhood" />
+              <div class="nearby_component" onclick="getLocation()"><span class="nearby_component_text"><img
+                    src="img/target.png" alt="target"> Near me</span></div>
+            </div>
+            <div class="form-group banner_daterange">
+              <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" class="form-control" />
+            </div>
+            <div class="form-group guest">
+              <input type="text" class="form-control" id="guest_show" value="1 Room, 1 Guest" readonly />
+
+              <div class="guest_wrapper">
+
+                <div class="guest_header">
+                  <span>Rooms</span>
+                  <span>Guest</span>
+                </div>
+                <div class="guest_body">
+                  <div class="gues_container">
+                    <p>Room 1</p>
+                    <p><span class="less">-</span> <span class="value">1</span> <span class="add">+</span></p>
+                    <p><span class="del">-</span></p>
+                  </div>
+                </div>
+                <div class="guest_foot">
+                  <span class="add_room">+ Add Room</span>
+                </div>
+
+
+              </div>
+
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary baner_form_btn">Submit</button>
+            </div>
+          </form>
+          <div class="bottom_tags_wrapper">
+            <span>Continue your search</span>
+            <a href="javascript:;" class="banner_tags">Mathura - 1 Guest</a>
+            <a href="javascript:;" class="banner_tags">All Localities - 2 Guest</a>
+            <a href="javascript:;" class="banner_tags">Red Fort - 1 Guest</a>
+            <a href="javascript:;" class="banner_tags">Kashmiri Gate ISBT - 1 Guest</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="middle_wrapper">
+    <div class="custom_container">
+      <div class="advantage_wrapper">
+        <div class="box box_one">
+          <div>
+            <img src="img/safe.png" alt="safe" />
+            <p>Best-in-class measures for your safe stay</p>
+            <p><a href="javascript:;">See How <i class="fas fa-arrow-right"></i></a></p>
+          </div>
+        </div>
+        <div class="box box_two">
+          <img src="https://static.fabhotels.com/homepage/disruption/illustration_home1V1.png" alt="" />
+          <div class="content_wrapper">
+            <h3>100% Disinfected</h3>
+            <p>Sanitization every 2 hours</p>
+            <p>Hospital grade cleaning chemicals</p>
+            <p>Masks, latex gloves for all staff</p>
+            <p>Linen/utensils washed in 70°C+ water</p>
+          </div>
+        </div>
+        <div class="box box_three">
+          <div class="content_wrapper">
+            <img src="https://static.fabhotels.com/homepage/disruption/illustration_home2V1.png" alt="" />
+            <h3>100% Safe</h3>
+            <p>Temp check mandatory for all</p>
+            <p>Sanitizers/masks for all</p>
+            <p>Social distancing at reception/lifts</p>
+            <p>PPE kits at all FabHotels</p>
+          </div>
+        </div>
+        <div class="box box_four">
+          <div class="content_wrapper">
+            <img src="https://static.fabhotels.com/homepage/disruption/illustration_home3V1.png" alt="" />
+            <h3>100% Convenient</h3>
+            <p>Contact-less Check-in</p>
+            <p>Contact-less Check-out</p>
+            <p>Contact-less Payments</p>
+            <p>In-room dining only</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="custom_container">
+    <div class="best_hotel_deals">
+      <h2 class="title_heading">Best hotel deals for you</h2>
+      <div class="hotels_list">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="hotel_image_wrapper">
+              <a href="javascript:;"><img src="img/best-hotel1.jpeg" alt="image_one" /></a>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="hotel_image_wrapper">
+              <a href="javascript:;"><img src="img/best-hotel1.jpeg" alt="image_one" /></a>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="hotel_image_wrapper">
+              <a href="javascript:;"><img src="img/best-hotel1.jpeg" alt="image_one" /></a>
+            </div>
+          </div>
+
+
+          <div class="item">
+            <div class="hotel_image_wrapper">
+              <a href="javascript:;"><img src="img/best-hotel1.jpeg" alt="image_one" /></a>
+            </div>
+          </div>
+
+
+          <div class="item">
+            <div class="hotel_image_wrapper">
+              <a href="javascript:;"><img src="img/best-hotel1.jpeg" alt="image_one" /></a>
+            </div>
+          </div>
+
+
+          <div class="item">
+            <div class="hotel_image_wrapper">
+              <a href="javascript:;"><img src="img/best-hotel1.jpeg" alt="image_one" /></a>
+            </div>
+          </div>
+
+
+          <div class="item">
+            <div class="hotel_image_wrapper">
+              <a href="javascript:;"><img src="img/best-hotel1.jpeg" alt="image_one" /></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="custom_container">
+    <div class="deal_wrapper">
+      <div class="deal_section">
+        <h2 class="title_heading">Let the deals find you!</h2>
+      </div>
+      <div class="deal_subscribe">
+        <form>
+          <input type="email" required>
+          <button class="subscribe_button">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="custom_container">
+    <div class="oyo_suggestion">
+      <h2 class="title_heading">Recommended OYO for you</h2>
+      <div class="oyo_list">
+        <div class="owl-carousel owl-theme">
+
+          <div class="item">
+            <div class="suggestion_wrap">
+              <div class="room_image">
+                <img src="img/hotel-list.webp" alt="hotel image" />
+              </div>
+              <div class="content_wrapper">
+                <h3>OYO 3271 Hotel Rajvi</h3>
+                <p>Near Ujala Circle Sketing arh</p>
+                <div class="">
+                  <span class="badge badge_green">3.3 <i class="far fa-star"></i></span>
+                  <span class="oyo_condition">Good</span>
+                </div>
+                <div class="amount_wrapper">
+                  <span class="price"><i class="fas fa-rupee-sign"></i> 559</span>
+                  <span class="actual_price"><i class="fas fa-rupee-sign"></i> 1165</span>
+                  <span class="discount"> 51% off</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="item">
+            <div class="suggestion_wrap">
+              <div class="room_image">
+                <img src="img/hotel-list.webp" alt="hotel image" />
+              </div>
+              <div class="content_wrapper">
+                <h3>OYO 3271 Hotel Rajvi</h3>
+                <p>Near Ujala Circle Sketing arh</p>
+                <div class="">
+                  <span class="badge badge_green">3.3 <i class="far fa-star"></i></span>
+                  <span class="oyo_condition">Good</span>
+                </div>
+                <div class="amount_wrapper">
+                  <span class="price"><i class="fas fa-rupee-sign"></i> 559</span>
+                  <span class="actual_price"><i class="fas fa-rupee-sign"></i> 1165</span>
+                  <span class="discount"> 51% off</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="item">
+            <div class="suggestion_wrap">
+              <div class="room_image">
+                <img src="img/hotel-list.webp" alt="hotel image" />
+              </div>
+              <div class="content_wrapper">
+                <h3>OYO 3271 Hotel Rajvi</h3>
+                <p>Near Ujala Circle Sketing arh</p>
+                <div class="">
+                  <span class="badge badge_green">3.3 <i class="far fa-star"></i></span>
+                  <span class="oyo_condition">Good</span>
+                </div>
+                <div class="amount_wrapper">
+                  <span class="price"><i class="fas fa-rupee-sign"></i> 559</span>
+                  <span class="actual_price"><i class="fas fa-rupee-sign"></i> 1165</span>
+                  <span class="discount"> 51% off</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="item">
+            <div class="suggestion_wrap">
+              <div class="room_image">
+                <img src="img/hotel-list.webp" alt="hotel image" />
+              </div>
+              <div class="content_wrapper">
+                <h3>OYO 3271 Hotel Rajvi</h3>
+                <p>Near Ujala Circle Sketing arh</p>
+                <div class="">
+                  <span class="badge badge_green">3.3 <i class="far fa-star"></i></span>
+                  <span class="oyo_condition">Good</span>
+                </div>
+                <div class="amount_wrapper">
+                  <span class="price"><i class="fas fa-rupee-sign"></i> 559</span>
+                  <span class="actual_price"><i class="fas fa-rupee-sign"></i> 1165</span>
+                  <span class="discount"> 51% off</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="trip_offer">
+    <div class="custom_container">
+      <div class="offer_inside_wrapper">
+        <a href="javascript:;"><img src="img/referral_banner.jpg" alt="goa trip"></a>
+        <div class="join_offer">
+          <img src="img/loyalty_banner.png" alt="join">
+          <div class="join_content">
+            <p>Join The Loyalty Program: A-List</p>
+            <p>Enjoy special discounts and unique privileges.</p>
+            <a href="javascript:;">Know More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick_hotel_search">
+        <h2 class="title_heading">Quick Hotel Search</h2>
+        <div class="owl-carousel owl-theme">
+
+          <div class="item">
+            <div class="area_hotel_search">
+              <a href="javascript:;">
+                <img src="img/bangalore.jpg" alt="banglore">
+                <div class="area_hotel_content">
+                  <h3>Bangalore</h3>
+                  <span class="avg_heading">Avg. Price: </span> <span class="avg_amount"><i
+                      class="fas fa-rupee-sign"></i> 1499</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+
+          <div class="item">
+            <div class="area_hotel_search">
+              <a href="javascript:;">
+                <img src="img/bangalore.jpg" alt="banglore">
+                <div class="area_hotel_content">
+                  <h3>Bangalore</h3>
+                  <span class="avg_heading">Avg. Price: </span> <span class="avg_amount"><i
+                      class="fas fa-rupee-sign"></i> 1499</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="area_hotel_search">
+              <a href="javascript:;">
+                <img src="img/bangalore.jpg" alt="banglore">
+                <div class="area_hotel_content">
+                  <h3>Bangalore</h3>
+                  <span class="avg_heading">Avg. Price: </span> <span class="avg_amount"><i
+                      class="fas fa-rupee-sign"></i> 1499</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+
+          <div class="item">
+            <div class="area_hotel_search">
+              <a href="javascript:;">
+                <img src="img/bangalore.jpg" alt="banglore">
+                <div class="area_hotel_content">
+                  <h3>Bangalore</h3>
+                  <span class="avg_heading">Avg. Price: </span> <span class="avg_amount"><i
+                      class="fas fa-rupee-sign"></i> 1499</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+
+          <div class="item">
+            <div class="area_hotel_search">
+              <a href="javascript:;">
+                <img src="img/bangalore.jpg" alt="banglore">
+                <div class="area_hotel_content">
+                  <h3>Bangalore</h3>
+                  <span class="avg_heading">Avg. Price: </span> <span class="avg_amount"><i
+                      class="fas fa-rupee-sign"></i> 1499</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="area_hotel_search">
+              <a href="javascript:;">
+                <img src="img/bangalore.jpg" alt="banglore">
+                <div class="area_hotel_content">
+                  <h3>Bangalore</h3>
+                  <span class="avg_heading">Avg. Price: </span> <span class="avg_amount"><i
+                      class="fas fa-rupee-sign"></i> 1499</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+
+          <div class="item">
+            <div class="area_hotel_search">
+              <a href="javascript:;">
+                <img src="img/bangalore.jpg" alt="banglore">
+                <div class="area_hotel_content">
+                  <h3>Bangalore</h3>
+                  <span class="avg_heading">Avg. Price: </span> <span class="avg_amount"><i
+                      class="fas fa-rupee-sign"></i> 1499</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+
+          <div class="item">
+            <div class="area_hotel_search">
+              <a href="javascript:;">
+                <img src="img/bangalore.jpg" alt="banglore">
+                <div class="area_hotel_content">
+                  <h3>Bangalore</h3>
+                  <span class="avg_heading">Avg. Price: </span> <span class="avg_amount"><i
+                      class="fas fa-rupee-sign"></i> 1499</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="area_hotel_search">
+              <a href="javascript:;">
+                <img src="img/bangalore.jpg" alt="banglore">
+                <div class="area_hotel_content">
+                  <h3>Bangalore</h3>
+                  <span class="avg_heading">Avg. Price: </span> <span class="avg_amount"><i
+                      class="fas fa-rupee-sign"></i> 1499</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer>
+    <div class="frenchise_section">
+      <div class="frenchise_content">
+        <div class="web_dis">
+          <h3>Want to grow your business? Become a partner.</h3>
+          <p>We increase occupancy, lower your marketing costs, and help provide fabulous stays. More than 600 Hotel
+            owners
+            and 40 Lakh customers believe in us.</p>
+        </div>
+        <div class="mob_dis">
+          <h3>Partner with us!</h3>
+          <p>Join our network of 600+ franchise owners.</p>
+        </div>
+      </div>
+      <a href="javascript:;" class="frenchise_cta">Be a Franchise</a>
+    </div>
+
+    <div class="custom_container">
+
+      <div class="footer_quick_links">
+        <div class="quick_links_wrapper">
+
+          <div class="quick_link_container">
+            <div class="quick_list">
+              <h3 class="footer_heading">Fabhotels</h3>
+              <p><a href="javascript:;">About Us</a></p>
+              <p><a href="javascript:;">Careers</a></p>
+              <p><a href="javascript:;">Press</a></p>
+              <p><a href="javascript:;">Travel Blog</a></p>
+            </div>
+            <div class="quick_list">
+              <h3 class="footer_heading">Partner With Us</h3>
+              <p><a href="javascript:;">Be our Franchisee</a></p>
+              <p><a href="javascript:;">Travel Agent</a></p>
+              <p><a href="javascript:;">Corporate Enquiries</a></p>
+              <p><a href="javascript:;">Quarantine Hotels</a></p>
+            </div>
+            <div class="quick_list">
+              <h3 class="footer_heading">Policies</h3>
+              <p><a href="javascript:;">Terms & Conditions</a></p>
+              <p><a href="javascript:;">Privacy Policy</a></p>
+              <p><a href="javascript:;">Cancellation Policy</a></p>
+              <p><a href="javascript:;">FAQs</a></p>
+            </div>
+          </div>
+
+          <div class="secured_section">
+            <span class="secured_by">SECURED BY <img src="img/geo-trust.png" alt="secured_by"></span>
+            <span class="we_accept">WE ACCEPT <img src="img/paytm.png" alt="paytm"></span>
+          </div>
+
+
+        </div>
+
+        <div class="app_details">
+          <h4 class="app_heading">Download our free app</h4>
+          <p class="downloads">(1M+ Downloads)</p>
+
+          <div class="app_wrapper">
+            <div class="form_container">
+              <form>
+                <input type="number" placeholder="Enter Mobile Number" required>
+                <button><i class="fas fa-arrow-right"></i></button>
+              </form>
+              <div class="app_logo">
+                <img src="img/google-play.png" alt="google play">
+                <img src="img/app-store.png" alt="app store">
+              </div>
+            </div>
+
+            <div class="qr_code">
+              <p>Scan to get the link</p>
+              <img src="img/Qrcode.jpg" alt="qrcode">
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="footer_city_wrapper">
+        <h3 class="footer_heading">Book Our Hotels In All Three Cities</h3>
+        <div class="hotel_city_list_wrapper">
+          <div class="hotel_city_list">
+            <p><a href="javascript:;">Hotels Near Me</a></p>
+            <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+            <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+            <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+          </div>
+
+          <div class="hotel_city_list">
+            <p><a href="javascript:;">Hotels Near Me</a></p>
+            <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+            <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+            <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+          </div>
+
+          <div class="hotel_city_list">
+            <p><a href="javascript:;">Hotels Near Me</a></p>
+            <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+            <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+            <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+          </div>
+
+          <div class="hotel_city_list">
+            <p><a href="javascript:;">Hotels Near Me</a></p>
+            <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+            <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+            <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+          </div>
+
+
+          <div class="hotel_city_list">
+            <p><a href="javascript:;">Hotels Near Me</a></p>
+            <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+            <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+            <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+          </div>
+
+
+          <div class="hotel_city_list">
+            <p><a href="javascript:;">Hotels Near Me</a></p>
+            <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+            <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+            <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer_summary">
+        <h3 class="footer_heading">FabHotels Is Best Reviewed Hotel Chain In India</h3>
+        <p>We are the fastest growing budget hotel brand in India with over 10,000+ rooms in 600+ hotels across 50+
+          cities in India. All our rooms and hotel properties are spacious, stylish, and contemporary, and are fitted
+          with all modern amenities so that you have a relaxed and consistent travel experience. Because we believe in
+          going the extra mile to ensure you have a delightful stay at the best-price, wherever you go. Most of our
+          hotel properties are located close to business hubs or popular tourist sites and easily accessible by public
+          transport, so you don’t have to waste time or money in traveling to your place of business. But what makes us
+          so Fab? Our team of highly enthusiastic and experienced professionals who work around the clock to ensure you
+          get the best sleep after a long day on the road. You don’t have to take our word for it. Just read what over
+          2,000,000+ happy customers have to say. Or better yet, book a stay with us and experience our services and
+          hospitality for yourself. Doesn’t matter where you travel to - Whether it’s New Delhi or Ooty. With FabHotels,
+          you will #StayFab, always!</p>
+      </div>
+
+      <p class="copyright center">&copy; 2020 Casa2 Stays Pvt. Ltd. All rights reserved.</p>
+
+    </div>
+  </footer>
+
+  <div class="mob_dis">
+    <div class="mob_menu_bottom">
+        <a href="/oyo/index.html" class="active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="javascript:;">
+            <i class="fas fa-heart"></i>
+            <span>Saved</span>
+        </a>
+        <a href="javascript:;">
+            <i class="fas fa-briefcase"></i>
+            <span>Bookings</span>
+        </a>
+        <a href="javascript:;">
+            <i class="fas fa-user-plus"></i>
+            <span>Invite &  Earn</span>
+        </a>
+        <a href="/oyo/account_details.html">
+            <i class="fas fa-user"></i>
+            <span>Account</span>
+        </a>
+    </div>
+</div>
+
+
+  <div class="login_popup">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="login_header">
+              <h5 class="modal-title">Log In/Sign Up</h5>
+              <p class="login_subheading">Sign-up to become a member, and get exclusive discounts.</p>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="login_body_wrapper">
+              <div class="account_info">
+                <div class="list_wrapper">
+                  <div class="gift_icon"><img src="img/gift_icon.png" alt="gift_icon" /></div>
+                  <div class="login_list">
+                    <h2>Earn Fab credits</h2>
+                    <p>Earn credits for your subsequent bookings</p>
+                  </div>
+                </div>
+
+                <div class="list_wrapper">
+                  <div class="user_icon"><img src="img/user_icon.png" alt="user_icon" /></div>
+                  <div class="login_list">
+                    <h2>Join the A-list</h2>
+                    <p>Become our club member for exclusive discounts</p>
+                  </div>
+                </div>
+
+                <div class="list_wrapper">
+                  <div class="breifcase_icon"><img src="img/breifcase_icon.png" alt="breifcase_icon" /></div>
+                  <div class="login_list">
+                    <h2>Easy cancellations & refunds</h2>
+                    <p>Manage all bookings easily via one click</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="login_screen">
+                <div class="login_sec">
+                  <form>
+                    <div class="input_wrapper">
+                      <span>+91</span>
+                      <input type="number" placeholder="Enter Mobile Number" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Continue</button>
+                    <p class="refral_code"><a href="javascript:;">Have a referral code ?</a></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="js/moment.min.js"></script>
+  <script type="text/javascript" src="js/daterangepicker.min.js"></script>
+  
+  <script>
+    $(document).ready(function () {
+      $('.add').click(function () {
+        one = $('.value').html();
+        get_num = Number(one) + 1;
+        $('.value').html(get_num);
+      });
+      $('.less', this).click(function () {
+        one = $('.value').html();
+        get_num = Number(one) - 1;
+        $('.value').html(get_num);
+        if (one <= 0) {
+          $('.value').html(0)
+        }
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('.add_room').click(function () {
+        $('.guest_body').append(
+          '<div class="gues_container"><p>Room 1</p><p><span class="less">-</span> <span class="value">1</span> <span class="add">+</span></p><p><span class="del">-</span></p></div>',
+        )
+      });
+    })
+  </script>
+  <script>
+    $(function () {
+      $('input[name="daterange"]').daterangepicker({
+        opens: 'left',
+        startDate: moment().startOf('hour'),
+      }, function (start, end, label) {
+        console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('#guest_show').click(function () {
+        $('.guest_wrapper').toggle();
+      })
+    })
+  </script>
+  <script>
+    $('.onscroll_form').hide();
+    $(window).scroll(function () {
+      var top = $(window).scrollTop();
+      var get_pos = $('.advantage_wrapper').offset().top + 10;
+      if (top > get_pos) {
+        $('.onscroll_form').animate({ scrollTop: 0 }, 500, 'swing').show();
+      } else {
+        $('.onscroll_form').hide();
+      }
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $(".langauge_selector").click(function () {
+        $(".custom_dropdown").toggleClass("show");
+      });
+      $(".custom_dropdown li").click(function () {
+        $("li").removeClass("active");
+        $(this).addClass("active");
+      });
+      $(".sub_header_list").hover(function () {
+        $(".sub_menu", this).toggle();
+      });
+
+    });
+  </script>
+  <script>
+    $(document).ready(function () { $(".hotels_list .owl-carousel").owlCarousel({ loop: !0, margin: 10, nav: !0, responsive: { 
+      0: { items: 1 }, 
+      500: { items: 2 }, 
+      600: { items: 3 }, 1000: { items: 4 } } }) });
+  </script>
+  <script>
+    $(document).ready(function () { $(".oyo_list .owl-carousel").owlCarousel({ loop: !0, margin: 10, nav: !0, responsive: { 0: { items: 1 },
+    500: { items: 2 },
+    600: { items: 1 }, 1000: { items: 3 } } }) });
+  </script>
+  <script>
+    $(document).ready(function () { $(".quick_hotel_search .owl-carousel").owlCarousel({ loop: !0, margin: 10, nav: !0, responsive: { 0: { items: 1 },  500: { items: 2 }, 600: { items: 3 }, 1000: { items: 6 } } }) });
+  </script>
+  <script>
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      x = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+      console.log(x)
+    }
+  </script>
+  
 </body>
+
 </html>

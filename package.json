@@ -1,0 +1,22 @@
+{
+  "name": "oyo_new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently 'npm run lite-server' 'npm run scss'",
+    "lite-server": "lite-server",
+    "scss": "node-sass scss/2-layouts -o css/2-layouts -w --output-style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "concurrently": "^5.3.0",
+    "lite-server": "^2.6.1",
+    "node-sass": "^5.0.0",
+    "owl.carousel": "^2.3.4"
+  }
+}

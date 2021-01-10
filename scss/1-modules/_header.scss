@@ -1,0 +1,140 @@
+.top_header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 4%;
+	margin-right: 4%;
+	flex-wrap: wrap;
+	height: 70px;
+
+	.logo {
+		width: 30%;
+		flex-basis: 30%;
+		@media (min-width: $break-md-2) and (max-width: $break-md-3) {
+			width: 20%;
+			flex-basis: 20%;
+		}
+		img {
+			width: 81px;
+			height: 29px;
+		}
+	}
+	.nav_right {
+		width: 70%;
+		flex-basis: 70%;
+		text-align: right;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		flex-wrap: wrap;
+		@media (min-width: $break-md-2) and (max-width: $break-md-3) {
+			width: 80%;
+			flex-basis: 80%;
+		}
+		.offer_Section {
+			width: 210px;
+			margin-right: 2%;
+			padding: 7px;
+			border: 1px solid #eee;
+			border-radius: 3px;
+			a {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				text-decoration: none;
+				color: $grey;
+				font-weight: 600;
+			}
+			img {
+				width: 40px;
+			}
+			span {
+				text-align: left;
+				line-height: 1.2;
+				margin-left: 8px;
+				padding: 1px;
+				small {
+					display: block;
+				}
+			}
+		}
+
+		.langauge_selector {
+			padding: 23px;
+			cursor: pointer;
+			border-left: 1px solid #eee;
+			border-right: 1px solid #eee;
+			span {
+				font-size: 14px;
+				font-weight: 600;
+				padding: 4px 10px 0 0;
+				line-height: 1;
+				i {
+					font-size: 22px;
+					vertical-align: middle;
+				}
+			}
+			.custom_dropdown {
+				margin: 24px 0 0 0;
+				padding: 0;
+				&.show {
+					width: 300px;
+					display: flex;
+					margin-left: -97px;
+					justify-content: space-between;
+					flex-wrap: wrap;
+					box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2);
+					background: $white;
+					z-index: 99;
+				}
+				li {
+					list-style: none;
+					text-align: left;
+					flex-basis: 50%;
+					width: 50%;
+					&.active {
+						i {
+							color: green;
+						}
+					}
+					a {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						text-decoration: none;
+						padding: 15px 10px;
+						color: $grey;
+						i {
+							font-size: 20px;
+						}
+						&:hover {
+							background: $lightgrey;
+						}
+						.lang_wrapper {
+							.sub_lang {
+								display: block;
+							}
+						}
+					}
+				}
+			}
+			&:hover {
+				background: #f5f5f5;
+			}
+		}
+
+		.login_tab {
+			a {
+				text-decoration: none;
+				color: #333;
+				font-size: 14px;
+				font-weight: 700;
+				padding: 18px;
+				i {
+					font-size: 22px;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}

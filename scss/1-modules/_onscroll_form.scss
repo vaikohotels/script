@@ -1,0 +1,148 @@
+.onscroll_form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    z-index: 99;
+    top: 0;
+    background: $white;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2);
+    @media(max-width: $break-sm-2){
+        display: none !important;
+    }
+    input {
+        height: 49px;
+        border-radius: 0;
+        border: 1px solid #ccc;
+        padding: 10px;
+        width: 100%;
+    }
+    .onscroll_logo {
+        flex-basis: 12%;
+        text-align: center;
+        img {
+            width: 81px;
+            height: 32px;
+        }
+    }
+    .onscroll_form_wrapper {
+        flex-basis: 70%;
+        form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            .onscroll_search_loc {
+                position: relative;
+                flex-basis: 40%;
+                .nearby_component {
+                    position: absolute;
+                    right: 0;
+                    top: 13px;
+                    .nearby_component_text {
+                        background: #f2f2f2;
+                        align-items: center;
+                        width: -webkit-fit-content;
+                        width: -moz-fit-content;
+                        width: fit-content;
+                        min-width: 82px;
+                        max-width: 100px;
+                        max-height: 30px;
+                        padding: 8px 10px;
+                        border-radius: 100px;
+                        box-sizing: border-box;
+                        cursor: pointer;
+                        margin-right: 15px;
+                        font-size: 12px;
+                        img {
+                            width: 18px;
+                            margin-right: 7px;
+                        }
+                    }
+                }
+            }
+            .onscroll_range {
+                flex-basis: 22%;
+            }
+            .onscroll_guest {
+                flex-basis: 22%;
+            }
+            .onscroll_submit {
+                flex-basis: 16%;
+                .btn-primary {
+                    width: 100%;
+                    height: 49px;
+                    border-radius: 0;
+                    background: $green;
+                    border: 1px solid $green;
+                    &:focus {
+                        background: #1ab64f;
+                        border: 1px solid #1ab64f;
+                        outline: none;
+                    }
+                    &:hover {
+                        background: #0e923a;
+                        border: 1px solid #0e923a;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .onscroll_langauge_select {
+        flex-basis: 6%;
+        text-align: center;
+        border-right: 1px solid #ccc;
+        .dropdown {
+            i {
+                font-size: 22px;
+            }
+            .dropdown-menu {
+                margin-top: 28px;
+                width: 190px;
+                margin-bottom: 0;
+                padding-bottom: 0;
+                .dropdown-item {
+                    padding: 8px 12px;
+                    display: block;
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+        }
+    }
+    .onscroll_login {
+        flex-basis: 10%;
+        a {
+            i {
+                font-size: $font-22;
+                vertical-align: middle;
+            }
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 18px;
+        }
+        .btn-secondary.dropdown-toggle{
+            background: transparent;
+            border: none;
+            &:focus{
+                color: $black;
+                outline: none;
+                box-shadow: none;
+            }
+        }
+        .dropdown-menu.show{
+            margin-top: 13px;
+            width: 200px;
+            padding: 0;
+            a{
+                padding: 10px;
+                border-bottom: 1px solid #ccc;
+                font-weight: normal;
+            }
+        }
+    }
+}

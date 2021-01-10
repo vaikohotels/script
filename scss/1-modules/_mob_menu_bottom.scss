@@ -1,0 +1,28 @@
+.mob_menu_bottom {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $white;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(0,0,0,0.5);
+    z-index: 999;
+    a{
+        color: rgba(0,0,0,0.5);
+        &.active{
+            color: #FF4E63 ;
+        }
+        i{
+            display: block;
+            font-size: 18px;
+            padding: 5px;
+        }
+        span{
+            display: block;
+            font-size: 12px;
+        }
+    }
+}

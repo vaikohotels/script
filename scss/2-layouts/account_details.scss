@@ -1,0 +1,256 @@
+@import "../0-base/base";
+@import "../1-modules/onscroll_form";
+@import "../1-modules/footer";
+@import "../1-modules/mob_menu_bottom";
+
+.accounts_details_container {
+    .user_name {
+        padding: 20px 0;
+        font-weight: 600;
+    }
+    .account_member {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .box {
+            flex: 0 0 30%;
+            background: $white;
+            box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.1);
+            border: solid 1px #d6d6d6;
+            border-radius: 2px;
+            padding: 34px 24px;
+            margin-right: 24px;
+            min-height: 304px;
+            @media (min-width: $break-md-2) and (max-width: $break-md-3) {
+                flex-basis: calc(50% - 12px);
+                width: calc(50% - 12px);
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            @media (min-width: $break-lg) and (max-width: $break-lg2) {
+                flex-basis: calc(50% - 12px);
+                width: calc(50% - 12px);
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            h2 {
+                font-weight: 600;
+                font-size: 26px;
+                line-height: 1.23;
+                padding: 6px 0;
+            }
+            p {
+                font-size: 16px;
+                line-height: 1.56;
+                color: rgb(34, 34, 34);
+                padding: 2px 0;
+            }
+            .btn-primary {
+                color: rgb(255, 255, 255);
+                font-weight: bold;
+                line-height: 1.5;
+                letter-spacing: 0.44px;
+                background: $green;
+                border-color: $green;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .booking_history_container {
+        background: $white;
+        box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.1);
+        border: solid 1px #d6d6d6;
+        border-radius: 2px;
+        padding: 34px 24px;
+        margin: 50px 0;
+        .booking_history_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .booking_history_wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            @media (min-width: $break-md-2) and (max-width: $break-md-3) {
+                align-items: flex-start;
+            }
+            @media (min-width: $break-lg) and (max-width: $break-lg2) {
+                align-items: flex-start;
+            }
+            .room_image_wrapper {
+                display: flex;
+                @media (min-width: $break-md-2) and (max-width: $break-md-3) {
+                    flex: 0 0 58%;
+                }
+                @media (min-width: $break-lg) and (max-width: $break-lg2) {
+                    flex: 0 0 58%;
+                }
+                img {
+                    flex: 0 0 30%;
+                    width: 150px;
+                    margin-right: 20px;
+                }
+                div {
+                    flex: 0 0 70%;
+                    p {
+                        &:first-child {
+                            font-size: 26px;
+                            padding: 0 0 10px 0;
+                            @media (min-width: $break-md-2) and (max-width: $break-md-3) {
+                                font-size: 18px;
+                                font-weight: 600;
+                            }
+                            @media (min-width: $break-lg) and (max-width: $break-lg2) {
+                                font-size: 18px;
+                                font-weight: 600;
+                            }
+                        }
+                        font-size: 16px;
+                        @media (min-width: $break-md-2) and (max-width: $break-md-3) {
+                            font-size: 14px;
+                        }
+                        @media (min-width: $break-lg) and (max-width: $break-lg2) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .token_no {
+                @media (min-width: $break-md-2) and (max-width: $break-md-3) {
+                    flex: 0 0 22%;
+                    text-align: center;
+                }
+                @media (min-width: $break-lg) and (max-width: $break-lg2) {
+                    flex: 0 0 22%;
+                    text-align: center;
+                }
+                p {
+                    font-weight: bold;
+                    line-height: normal;
+                    margin: 0px;
+                    color: rgba(0, 0, 0, 0.87);
+                    font-size: 16px;
+                    letter-spacing: 0.5px;
+                }
+            }
+            .checkout_details {
+                text-align: right;
+                @media (min-width: $break-md-2) and (max-width: $break-md-3) {
+                    flex: 0 0 22%;
+                }
+                @media (min-width: $break-lg) and (max-width: $break-lg2) {
+                    flex: 0 0 22%;
+                }
+                p {
+                    &:first-child {
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                    font-weight: 16px;
+                    a {
+                        color: rgb(238, 46, 36);
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .booking_profile_container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 60px;
+        .box {
+            background: $white;
+            border-radius: 2px;
+            box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.1);
+            border: solid 1px #d6d6d6;
+            margin-right: 24px;
+            flex-basis: calc(50% - 10px);
+            width: calc(50% - 10px);
+            min-height: 377px;
+            padding: 50px 100px;
+            &:last-child {
+                margin-right: 0;
+            }
+            @media (min-width: $break-md-2) and (max-width: $break-md-3) {
+                padding: 20px 30px;
+            }
+            @media (min-width: $break-lg) and (max-width: $break-lg2) {
+                padding: 20px 30px;
+            }
+            h2 {
+                font-size: 26px;
+                font-weight: bold;
+                line-height: 1.23;
+                padding: 20px 0;
+                a {
+                    font-size: 20px;
+                    color: $black;
+                }
+            }
+            h3 {
+                font-size: 16px;
+            }
+            p {
+                font-weight: 600;
+                padding: 8px 0px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.profile_view_mob {
+    h1 {
+        font-size: 24px;
+        line-height: 30px;
+        padding: 56px 16px 18px;
+    }
+    .member_details_mob {
+        position: relative;
+        img {
+            width: 100%;
+            height: 150px;
+        }
+        .member_valid {
+            position: absolute;
+            top: 20px;
+            left: 6%;
+            color: #fff;
+            p {
+                padding: 0 0 2px 0;
+                &:first-child {
+                    padding: 0 0 8px 0;
+                    font-weight: 600;
+                    color: red;
+                    font-size: 18px;
+                }
+                span {
+                    color: #ccc;
+                }
+            }
+        }
+    }
+    .other_links {
+        padding: 10px;
+        a {
+            display: block;
+            color: #212121;
+            padding: 10px;
+            font-size: 18px;
+            i {
+                padding: 0px 10px 0px 0px;
+            }
+        }
+    }
+}

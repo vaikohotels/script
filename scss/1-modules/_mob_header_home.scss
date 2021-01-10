@@ -1,0 +1,118 @@
+.mob_header {
+    background: $header_red;
+    padding: 22px;
+    .mob_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .mob_logo {
+            flex-basis: 50%;
+            width: 50%;
+            img {
+                width: 60px;
+            }
+        }
+        .login_call {
+            flex-basis: 50%;
+            width: 50%;
+            text-align: right;
+            a {
+                i {
+                    color: $white;
+                    padding: 5px 5px;
+                    font-size: $font-19;
+                    transform: rotate(100deg);
+                }
+            }
+            .mob_login {
+                padding: 4px 18px;
+                border: 1px solid #fff;
+                border-radius: 24px;
+                font-size: $font-17;
+                color: $white;
+            }
+        }
+    }
+
+    .mob_header_body {
+        margin-top: 60px;
+        h3 {
+            font-size: $font-16;
+            font-weight: 600;
+            color: $white;
+            margin-bottom: 20px;
+            padding: 0px 10px;
+            span {
+                font-weight: normal;
+                display: block;
+                font-size: $font-14;
+            }
+        }
+        form {
+            .mob_search_field_container {
+                background: #fff;
+                padding: 14px;
+                border-radius: 25px 25px 0px 0px;
+                i {
+                    padding: 0px 0px 0px 0px;
+                }
+                input {
+                    height: 40px;
+                    border: none;
+                    width: 90%;
+                    padding: 20px 10px;
+                }
+            }
+            .date_guest_container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 12px;
+                background: #f4f4f4;
+                border-radius: 0px 0px 25px 25px;
+                .mob_date {
+                    width: 80%;
+                    flex-basis: 80%;
+                    input {
+                        width: 100%;
+                        padding: 10px;
+                        border: none;
+                        background: #f4f4f4;
+                    }
+                }
+                .guest_sellect {
+                    width: 20%;
+                    flex-basis: 20%;
+                }
+            }
+            .search_button {
+                text-align: center;
+                .btn-primary {
+                    width: 100%;
+                    margin-top: 10px;
+                    border-radius: 25px;
+                    background: linear-gradient(261deg, #ffe86f, #ffe457 45%, #fddc2c);
+                    color: #000;
+                    border: yellow;
+                    padding: 8px;
+                    font-size: 16px;
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+                p {
+                    padding: 0px;
+                    margin: 9px 0px 0px 0px;
+                    color: $white;
+                }
+                a {
+                    color: #ffe86f;
+                    font-weight: 600;
+                    padding: 4px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

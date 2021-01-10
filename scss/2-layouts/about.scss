@@ -1,0 +1,39 @@
+@import "../0-base/base";
+@import "../1-modules/header";
+@import "../1-modules/submenu_other";
+@import "../1-modules/mob_header_home";
+@import "../1-modules/footer";
+@import "../1-modules/mob_menu_bottom";
+@import "../1-modules/bottom_banner";
+
+.top_section {
+    height: 20vh;
+    background: linear-gradient(135.46deg, #d11450, #df293a);
+}
+
+.about_container {
+    padding: 20px;
+    background: #fff;
+    position: relative;
+    margin: -90px auto 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    width: 80%;
+    @media(max-width: 320px){
+        width: 100%;
+    }
+    @media(min-width: 321px) and (max-width: $break-sm){
+        width: 100%;
+    }
+    margin-bottom: 50px;
+    h2 {
+        font-size: $font_22;
+        color: #555555;
+    }
+    p {
+        font-size: $font_14;
+        padding: 10px 0;
+        color: #555555;
+    }
+}
+

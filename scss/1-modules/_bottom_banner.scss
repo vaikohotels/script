@@ -1,0 +1,133 @@
+.about_banner {
+    background: linear-gradient(259deg, #f7fbc6, #d0e1f9 75%, #e1f2ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 0 0;
+    @media(min-width: $break-sm-2) and (max-width: $break-md){
+        padding: 20px 0 20px 0;
+    }
+    @media(max-width: 320px){
+        flex-wrap: wrap;
+        text-align: center;
+        
+    }
+    @media(min-width: 321px) and (max-width: $break-sm){
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    
+    .about_img_mob {
+        background: url("../../img/fab_sprite_v19.png") -94px -2613px no-repeat;
+        width: 207px;
+        height: 227px;
+        margin-right: 40px;
+        @media(max-width: 320px){
+            margin-right: 0;
+        }
+        @media(min-width: 321px) and (max-width: $break-sm){
+            margin-right: 0;
+        }
+        @media(min-width: $break-sm-2) and (max-width: $break-md){
+            display: none;
+         }
+    }
+    .about_wrapper {
+        width: 146px;
+        margin-left: 40px;
+        background: $white;
+        text-align: center;
+        padding: 8px 0;
+        @media(max-width: 320px){
+            margin-left: 0px;
+        }
+        @media(min-width: 321px) and (max-width: $break-sm){
+            margin-left: 0px;
+        }
+        @media(min-width: $break-sm-2) and (max-width: $break-md){
+            display: none;
+         }
+        .about_qrcode {
+            background: url("../../img/fab_sprite_v19.png") 0px -2356px no-repeat;
+            width: 128px;
+            height: 128px;
+
+            display: inline-block;
+        }
+    }
+}
+
+
+.about_banner_content {
+    .about_banner_button {
+        margin-top: 28px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        a{
+            margin-right: 10px;
+            &:last-child{
+                margin-right: 0;
+                @media(max-width: 320px){
+                    margin-right: auto;
+                }
+                @media(min-width: 321px) and (max-width: $break-sm){
+                    margin-right: auto;
+                }
+            }
+        }
+        .android_link {
+            width: 120px;
+            height: 40px;
+            cursor: pointer;
+            background: url("../../img/fab_sprite_v19.png") -124px -1378px;
+            background-repeat: no-repeat;
+            display: inline-block;
+            @media(max-width: 320px){
+                flex: 0 0 50%;
+                margin: 20px auto;
+            }
+            @media(min-width: 321px) and (max-width: $break-sm){
+                margin: 20px auto;
+            }
+            
+        }
+        .apple_link {
+            width: 120px;
+            height: 40px;
+            cursor: pointer;
+            background: url("../../img/fab_sprite_v19.png") -124px -1226px;
+            background-repeat: no-repeat;
+            display: inline-block;
+            @media(max-width: 320px){
+                flex: 0 0 50%;
+                margin: 20px auto;
+            }
+            @media(min-width: 321px) and (max-width: $break-sm){
+                
+                margin: 20px auto;
+            }
+            
+        }
+        .get_sms_link {
+            padding: 9px 22px;
+            border-radius: 3px;
+            background-color: #fedd10;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 22px;
+            letter-spacing: 0.2px;
+            color: #1e254a;
+            cursor: pointer;
+            text-decoration: none;
+            @media(max-width: 320px){
+                flex: 0 0 50%;
+                margin: 20px auto;
+            }
+            @media(min-width: 321px) and (max-width: $break-sm){
+                margin: 20px auto;
+            }
+        }
+    }
+}
+
