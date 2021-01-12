@@ -13,22 +13,41 @@
         align-items: center;
         margin-top: 50px;
         margin-bottom: 50px;
+        @media (max-width: 320px) {
+            flex-wrap: wrap;
+        }
         .box_left {
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex: 0 0 50%;
             width: 50%;
+            flex-wrap: wrap;
+            @media (max-width: 320px) {
+                flex: 0 0 100%;
+                width: 100%;
+            }
             .image_wrapper {
                 flex: 0 0 50%;
                 width: 50%;
+                @media (max-width: 320px) {
+                    flex: 0 0 100%;
+                    width: 100%;
+                }
                 img {
                     width: 613px;
+                    @media (max-width: 320px) {
+                        width: 100%;
+                    }
                 }
             }
             .content_wrap {
                 flex: 0 0 45%;
                 width: 45%;
+                @media (max-width: 320px) {
+                    flex: 0 0 100%;
+                    width: 100%;
+                }
                 p {
                     &:nth-child(1) {
                         font-size: 20px;
@@ -52,6 +71,10 @@
         .box_right {
             flex: 0 0 50%;
             width: 50%;
+            @media (max-width: 320px) {
+                flex: 0 0 100%;
+                width: 100%;
+            }
             .steps_wrapper {
                 box-shadow: 0 2px 6px 0 rgba(140, 128, 128, 0.5);
                 padding: 30px;
@@ -104,6 +127,11 @@
         flex: 0 0 50%;
         width: 50%;
         border-right: 1px solid #e1e1e1;
+        @media (max-width: 320px) {
+            flex: 0 0 100%;
+            width: 100%;
+            border-right: none;
+        }
         form {
             margin-top: 24px;
             margin-bottom: 10px;
@@ -131,6 +159,11 @@
         flex: 0 0 50%;
         width: 50%;
         padding-left: 80px;
+        @media (max-width: 320px) {
+            flex: 0 0 100%;
+            width: 100%;
+            padding-left: 0px;
+        }
         .icon_container {
             margin-top: 24px;
             margin-bottom: 10px;
@@ -171,6 +204,10 @@
     padding: 0px 0px 0 8px;
     overflow: hidden;
     margin: 0 auto;
+    @media (max-width: 320px) {
+        width: auto;
+        padding: 0;
+    }
     h2 {
         font-size: 26px;
         font-weight: bold;
@@ -185,17 +222,17 @@
         margin-top: 50px;
         margin-bottom: 50px;
 
-        .owl-stage-outer{
+        .owl-stage-outer {
             overflow: visible;
         }
-        
+
         .item {
             border-radius: 4px;
             box-shadow: 0 2px 4px 0 rgba(193, 193, 193, 0.5);
             border: solid 1px #d7d7d7;
             background: $white;
             padding: 30px 12px 25px 35px;
-            &.active{
+            &.active {
                 margin-left: 25px;
             }
             .box {
@@ -239,8 +276,8 @@
                 }
             }
         }
-        .owl-nav{
-            .owl-prev{
+        .owl-nav {
+            .owl-prev {
                 padding: 0px !important;
                 position: absolute;
                 left: -37px;
@@ -251,13 +288,13 @@
                 background: #fff;
                 text-align: center;
                 border-radius: 100%;
-                box-shadow: 0 2px 4px 0 rgba(193,193,193,0.5);
+                box-shadow: 0 2px 4px 0 rgba(193, 193, 193, 0.5);
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 outline: none;
             }
-            .owl-next{
+            .owl-next {
                 padding: 0px !important;
                 position: absolute;
                 right: -37px;
@@ -268,7 +305,7 @@
                 background: #fff;
                 text-align: center;
                 border-radius: 100%;
-                box-shadow: 0 2px 4px 0 rgba(193,193,193,0.5);
+                box-shadow: 0 2px 4px 0 rgba(193, 193, 193, 0.5);
                 display: flex;
                 justify-content: center;
                 align-items: center;
