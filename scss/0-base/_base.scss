@@ -206,6 +206,15 @@ a {
 }
 
 
+.section{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &.alt{
+        background: #f1f3f7;
+    }
+}
+
+
 .badge{
     padding: 5px;
     &.badge_green{

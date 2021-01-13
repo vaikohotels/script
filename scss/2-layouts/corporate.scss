@@ -1,0 +1,303 @@
+@import "../0-base/base";
+@import "../1-modules/header";
+@import "../1-modules/submenu_other";
+@import "../1-modules/mob_header_home";
+@import "../1-modules/footer";
+@import "../1-modules/mob_menu_bottom";
+@import "../1-modules/bottom_banner";
+
+.corporate_banner {
+    height: 46vh;
+    background: linear-gradient(rgba(10, 16, 49, 0.9), rgba(10, 16, 49, 0.9)),
+        url(https://static.fabhotels.com/img/main_banner_v1.png);
+    .banner_wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        .corporate_left_content {
+            h1 {
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 24px;
+                color: #fff;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 28px;
+                line-height: 34px;
+                color: #ffffff;
+                margin-bottom: 20px;
+            }
+            .corporate_count {
+                display: flex;
+                align-items: center;
+                div {
+                    margin-right: 20px;
+                    p {
+                        background-color: #fff6c8;
+                        padding: 10px;
+                        color: #000;
+                        border-radius: 3px;
+                        font-size: 18px;
+                        font-weight: bold;
+                        width: 100px;
+                        line-height: 30px;
+                        text-align: center;
+                    }
+                    span {
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: $white;
+                        display: block;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .corporate_form {
+            flex-basis: 30%;
+            width: 30%;
+            .form_container {
+                background: $white;
+                padding: 20px 20px 15px;
+                box-shadow: 0 2px 4px 0 rgba(198, 197, 197, 0.5);
+                border-radius: 3px;
+                position: relative;
+                top: 40px;
+                h2 {
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: #4a4a4a;
+                    margin-bottom: 20px;
+                }
+                .input_wrapper {
+                    input {
+                        width: 100%;
+                        border: none;
+                        border-bottom: 1px solid #ccc;
+                        height: 40px;
+                        margin-bottom: 20px;
+                    }
+                }
+                button {
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 3px;
+                    text-align: center;
+                    background: #fddc2c;
+                    cursor: pointer;
+                    border: 1px solid #fddc2c;
+                    &:focus {
+                        box-shadow: none;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.promise_wrapper{
+    margin-top: 80px;
+    h2{
+        padding: 10px;
+    }
+    .promise_section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        .box{
+            padding: 10px;
+            flex-basis: calc(30.33% - 20px);
+            width: calc(30.33% - 20px);
+            position: relative;
+            margin: {
+                left: 35px;
+                top: 10px;
+                bottom: 10px;
+                right: 10px;
+            }
+            h3{
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.1px;
+                color: #4a4a4a;
+            }
+            &:before{
+                content: '\f058';
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                position: absolute;
+                top: 12px;
+                left: -21px;
+                font-size: 22px;
+                color: rgb(0, 185, 110);
+            }
+        }
+    }
+}
+
+
+.cities_wrapper{
+    h2{
+        margin-bottom: 12px;
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 28px;
+        letter-spacing: 0.1px;
+        color: #4a4a4a;
+    }
+    .cities_container{
+        ul{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            li{
+                list-style: none;
+                flex-basis: 20%;
+                width: 20%;
+                a{
+                    font-size: 18px;
+                    font-weight: bold;
+                    line-height: 24px;
+                    letter-spacing: 0.1px;
+                    color: #4a4a4a;
+                    display: block;
+                    padding: 5px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.partner{
+    margin-top: 50px;
+    .image_wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        .box{
+            background-image: url('../../img/corporate_sprite.png');
+            background-repeat: no-repeat;
+            margin-right: 45px;
+        }
+        .book_myshow{
+            background-position: 1px 0;
+            width: 185px;
+            height: 60px;
+        }
+        .coke{
+            background-position: -179px 1px;
+            width: 145px;
+            height: 60px;
+        }
+        .delhivery{
+            background-position: -109px -53px;
+            width: 145px;
+            height: 60px;
+        }
+        .snapdeal{
+            background-position: 0 -144px;
+            width: 151px;
+            height: 50px;
+        }
+        .ola{
+            background-position: -80px -253px;
+            width: 155px;
+            height: 60px;
+        }
+    }
+}
+
+
+.mini_banner{
+    text-align: center;
+    margin-bottom: 50px;
+    img{
+        width: 100%;
+    }
+}
+
+.review_section_corporate{
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+    url(https://static.fabhotels.com/img/main_banner_v1.png);
+    height: 40vh;
+    .review_slider_wrapper{        
+        height: 100%;
+        position: relative;
+        .review_title{
+            width: 20%;
+            float: left;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            h2{
+                line-height: 1.2;
+                font-weight: 600;
+            }
+        }
+        .review_container{
+            width: 80%;
+            margin: 0 0 0 auto;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            .item{
+                padding: 10px 10px;
+                background: $white;
+                h4{
+                    color: #3c3c3c;
+                    font-size: 12px;
+                    line-height: 24px;
+                }
+                .post{
+                    font-size: 14px;
+                    line-height: 24px;
+                    display: block;
+                    font-weight: 700;
+                    color: #4a4a4a;
+                    letter-spacing: 0.2px;
+                    margin-bottom: 10px;
+                }
+            }
+            .owl-nav{
+                position: absolute;
+                left: -250px;
+                bottom: 10px;
+                transform: translateX(0px);
+                font-size: 32px;
+                .owl-prev{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 100%;
+                    border: 1px solid #000;
+                    outline: none;
+                    margin-right: 10px;
+                }
+                .owl-next{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 100%;
+                    border: 1px solid #000;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
