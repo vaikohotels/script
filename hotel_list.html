@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> Hotel List</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- End Favicons -->
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <!-- End Fontawesome -->
+
+    <!-- Css Files -->
+    <link href="css/base/bootstrap.css" rel="stylesheet" />
+    <link href="css/base/owl.carousel.css" rel="stylesheet" />
+    <link href="css/2-layouts/hotel_list.css" rel="stylesheet" />
+    <!-- End Css Files -->
+
+</head>
+
+<body>
+    <div class="onscroll_form">
+        <div class="onscroll_logo">
+            <img src="img/logo.png" alt="logo">
+        </div>
+        <div class="onscroll_form_wrapper">
+            <form>
+                <div class="onscroll_search_loc">
+                    <input type="text" placeholder="Search by city, hotel, or neighboborhood ">
+                    <div class="nearby_component" onclick="getLocation()"><span class="nearby_component_text"><img
+                                src="img/target.png" alt="target"> Near me</span></div>
+                </div>
+                <div class="onscroll_range">
+                    <input type="text" name="daterange" value="01/01/2018 - 01/15/2018">
+                </div>
+                <div class="onscroll_guest">
+                    <input type="text" value="" readonly />
+
+                </div>
+                <div class="onscroll_submit">
+                    <button class="btn btn-primary">Search</button>
+                </div>
+            </form>
+        </div>
+        <div class="onscroll_langauge_select">
+            <div class="dropdown">
+                <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-globe"></i>
+                </span>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">English</a>
+                    <a class="dropdown-item" href="#">Español</a>
+                    <a class="dropdown-item" href="#">Bahasa</a>
+                    <a class="dropdown-item" href="#">Arabic</a>
+                    <a class="dropdown-item" href="#">Vietnamese</a>
+                    <a class="dropdown-item" href="#">Japanese</a>
+                    <a class="dropdown-item" href="#">Português</a>
+                </div>
+            </div>
+        </div>
+        <div class="onscroll_login">
+            <!-- <a href="javascript:;"><i class="far fa-user-circle"></i> Welcome, Aman</a> -->
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Welcome, Aman
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">My Bookings</a>
+                    <a class="dropdown-item" href="#">My Profile</a>
+                    <a class="dropdown-item" href="#">+91 8800 366 374</a>
+                    <a class="dropdown-item" href="#">24*7 Support</a>
+                    <a class="dropdown-item" href="#">About Us</a>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Web Header -->
+   
+    <!-- End Web Header -->
+
+
+    <div class="tabs_container">
+        <div class="custom_container">
+            <a href="javascript:;">All Hotels</a>
+            <a href="javascript:;">goStays Certified</a>
+            <a href="javascript:;">goSafe</a>
+            <a href="javascript:;">Couple Friendly</a>
+            <a href="javascript:;">OYO Rooms</a>
+        </div>
+    </div>
+
+
+    
+
+
+
+    <div class="main_container_hotel_list">
+        <div class="custom_container">
+            <div class="property_list_wrapper">
+                <div class="filter_wrapper">
+                    <form>
+                        <h2>FILTERS <span>Clear</span></h2>
+
+                        <div class="filter_container">
+                            <div class="accordion" id="accordionExample">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h2 data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Popular Filter <span>Reset</span>
+                                        </h2>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <h3>Free Cancellation Available</h3>
+                                            <p>Free cancellation plans available. Cancel within the given time at no
+                                                extra charges</p>
+
+                                            <h3>Free Cancellation Available</h3>
+                                            <p>Free cancellation plans available. Cancel within the given time at no
+                                                extra charges</p>
+
+                                            <h3>Free Cancellation Available</h3>
+                                            <p>Free cancellation plans available. Cancel within the given time at no
+                                                extra charges</p>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <h2 data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            Price Range <span>Reset</span>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <div class="price_range">
+                                                <div>
+                                                    <input type="checkbox" /> <span>Upto 2000</span>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" /> <span>2001 - 4000</span>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" /> <span>4001 - 6000</span>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" /> <span>6001 - 8000</span>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" /> <span>8000 +</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h2 data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            Custom Ratings <span>Reset</span>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseThree" class="collapse show" aria-labelledby="headingThree"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <div class="price_range">
+                                                <div>
+                                                    <input type="checkbox" /> <span>4+</span>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" /> <span>3.5+</span>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" /> <span>3+</span>
+                                                </div>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="headingFour">
+                                        <h2 data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                            aria-controls="collapseFour">
+                                            Star Rating <span>Reset</span>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseFour" class="collapse show" aria-labelledby="headingFour"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <div class="price_range">
+                                                <div>
+                                                    <input type="checkbox" /> <span>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" /> <span>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" /> <span>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+
+                                                    </span>
+                                                </div>
+
+                                                <div>
+                                                    <input type="checkbox" /> <span>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+
+
+                                                <div>
+                                                    <input type="checkbox" /> <span>
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="card">
+                                    <div class="card-header" id="headingFive">
+                                        <h2 data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
+                                            aria-controls="collapseFive">
+                                            Hotel Type <span>Reset</span>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseFive" class="collapse show" aria-labelledby="headingFive"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <div class="price_range">
+                                                <div>
+                                                    <input type="checkbox" /> <span>Hotel</span>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" /> <span>Apartment</span>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" /> <span>Homestay</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header" id="headingSix">
+                                        <h2 data-toggle="collapse" data-target="#collapseSix" aria-expanded="false"
+                                            aria-controls="collapseSix">
+                                            Amenities <span>Reset</span>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseSix" class="collapse show" aria-labelledby="headingSix"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <div class="price_range">
+                                                <div>
+                                                    <input type="checkbox" /> <span>Air Conditioning</span>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" /> <span>Airport Transfer (on Demand)</span>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" /> <span>Banquet hall</span>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" /> <span>Bonfire</span>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" /> <span>Business Services</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="property_wrapper">
+
+                    <div class="property_box">
+
+                        <div class="property_image_wrapper">
+                            <div class="slider_wrapper">
+                                <img src="https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201412311314381986-e0d893c607f711ebb6060242ac110003.jpg"
+                                    alt="" />
+                            </div>
+                        </div>
+                        <div class="property_details">
+                            <a href="javascript:;">
+                                <div class="top">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="rating_count">
+                                        <span class="rating_badge">4.2/5</span>
+                                        <span class="count">1084 Ratings</span>
+                                    </div>
+                                </div>
+                                <h2 class="hotel_name">Hotel Aman Continental</h2>
+                                <h3 class="area">Patparganj</h3>
+                                <div class="hotel_description">
+                                    <p>Walking Distance From New Delhi Railway Station</p>
+                                    <p>Deluxe Room Free Wi-Fi & 1 Complimentary Snack Basket</p>
+                                    <ul>
+                                        <li>Air Conditioning</li>
+                                        <li>Business Services</li>
+                                        <li>+ More</li>
+                                    </ul>
+                                    <p class="couple">Couple Friendly</p>
+                                    <img src="img/property_banner.png" alt="banner">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="property_price">
+                            <a href="javascript:;">
+                                <h4 class="badge_can">Free Cancellation Till Checkin</h4>
+                                <p class="badge_pimary">Super Deals</p>
+                                <p class="complimentry">Complimentary Room Upgrade</p>
+                                <p class="discount_badge">58% Off</p>
+                                <p class="price"><small><i class="fas fa-rupee-sign"></i> 2532</small> <i
+                                        class="fas fa-rupee-sign"></i> 1060</p>
+                                <p class="tax"><i class="fas fa-plus"></i> <i class="fas fa-rupee-sign"></i> 241
+                                    TAXES &
+                                    FEES
+                                </p>
+                                <p class="day_charge">Per room/night</p>
+                            </a>
+                            <p><a href="javascript:;">Login for more deals</a></p>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="property_box">
+
+                        <div class="property_image_wrapper">
+                            <div class="slider_wrapper">
+                                <img src="https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201412311314381986-e0d893c607f711ebb6060242ac110003.jpg"
+                                    alt="" />
+                            </div>
+                        </div>
+                        <div class="property_details">
+                            <a href="javascript:;">
+                                <div class="top">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="rating_count">
+                                        <span class="rating_badge">4.2/5</span>
+                                        <span class="count">1084 Ratings</span>
+                                    </div>
+                                </div>
+                                <h2 class="hotel_name">Hotel Aman Continental</h2>
+                                <h3 class="area">Patparganj</h3>
+                                <div class="hotel_description">
+                                    <p>Walking Distance From New Delhi Railway Station</p>
+                                    <p>Deluxe Room Free Wi-Fi & 1 Complimentary Snack Basket</p>
+                                    <ul>
+                                        <li>Air Conditioning</li>
+                                        <li>Business Services</li>
+                                        <li>+ More</li>
+                                    </ul>
+                                    <p class="couple">Couple Friendly</p>
+                                    <img src="img/property_banner.png" alt="banner">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="property_price">
+                            <a href="javascript:;">
+                                <h4 class="badge_can">Free Cancellation Till Checkin</h4>
+                                <p class="badge_pimary">Super Deals</p>
+                                <p class="complimentry">Complimentary Room Upgrade</p>
+                                <p class="discount_badge">58% Off</p>
+                                <p class="price"><small><i class="fas fa-rupee-sign"></i> 2532</small> <i
+                                        class="fas fa-rupee-sign"></i> 1060</p>
+                                <p class="tax"><i class="fas fa-plus"></i> <i class="fas fa-rupee-sign"></i> 241
+                                    TAXES &
+                                    FEES
+                                </p>
+                                <p class="day_charge">Per room/night</p>
+                            </a>
+                            <p><a href="javascript:;">Login for more deals</a></p>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="property_box">
+
+                        <div class="property_image_wrapper">
+                            <div class="slider_wrapper">
+                                <img src="https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201412311314381986-e0d893c607f711ebb6060242ac110003.jpg"
+                                    alt="" />
+                            </div>
+                        </div>
+                        <div class="property_details">
+                            <a href="javascript:;">
+                                <div class="top">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="rating_count">
+                                        <span class="rating_badge">4.2/5</span>
+                                        <span class="count">1084 Ratings</span>
+                                    </div>
+                                </div>
+                                <h2 class="hotel_name">Hotel Aman Continental</h2>
+                                <h3 class="area">Patparganj</h3>
+                                <div class="hotel_description">
+                                    <p>Walking Distance From New Delhi Railway Station</p>
+                                    <p>Deluxe Room Free Wi-Fi & 1 Complimentary Snack Basket</p>
+                                    <ul>
+                                        <li>Air Conditioning</li>
+                                        <li>Business Services</li>
+                                        <li>+ More</li>
+                                    </ul>
+                                    <p class="couple">Couple Friendly</p>
+                                    <img src="img/property_banner.png" alt="banner">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="property_price">
+                            <a href="javascript:;">
+                                <h4 class="badge_can">Free Cancellation Till Checkin</h4>
+                                <p class="badge_pimary">Super Deals</p>
+                                <p class="complimentry">Complimentary Room Upgrade</p>
+                                <p class="discount_badge">58% Off</p>
+                                <p class="price"><small><i class="fas fa-rupee-sign"></i> 2532</small> <i
+                                        class="fas fa-rupee-sign"></i> 1060</p>
+                                <p class="tax"><i class="fas fa-plus"></i> <i class="fas fa-rupee-sign"></i> 241
+                                    TAXES &
+                                    FEES
+                                </p>
+                                <p class="day_charge">Per room/night</p>
+                            </a>
+                            <p><a href="javascript:;">Login for more deals</a></p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="property_box">
+
+                        <div class="property_image_wrapper">
+                            <div class="slider_wrapper">
+                                <img src="https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201412311314381986-e0d893c607f711ebb6060242ac110003.jpg"
+                                    alt="" />
+                            </div>
+                        </div>
+                        <div class="property_details">
+                            <a href="javascript:;">
+                                <div class="top">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="rating_count">
+                                        <span class="rating_badge">4.2/5</span>
+                                        <span class="count">1084 Ratings</span>
+                                    </div>
+                                </div>
+                                <h2 class="hotel_name">Hotel Aman Continental</h2>
+                                <h3 class="area">Patparganj</h3>
+                                <div class="hotel_description">
+                                    <p>Walking Distance From New Delhi Railway Station</p>
+                                    <p>Deluxe Room Free Wi-Fi & 1 Complimentary Snack Basket</p>
+                                    <ul>
+                                        <li>Air Conditioning</li>
+                                        <li>Business Services</li>
+                                        <li>+ More</li>
+                                    </ul>
+                                    <p class="couple">Couple Friendly</p>
+                                    <img src="img/property_banner.png" alt="banner">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="property_price">
+                            <a href="javascript:;">
+                                <h4 class="badge_can">Free Cancellation Till Checkin</h4>
+                                <p class="badge_pimary">Super Deals</p>
+                                <p class="complimentry">Complimentary Room Upgrade</p>
+                                <p class="discount_badge">58% Off</p>
+                                <p class="price"><small><i class="fas fa-rupee-sign"></i> 2532</small> <i
+                                        class="fas fa-rupee-sign"></i> 1060</p>
+                                <p class="tax"><i class="fas fa-plus"></i> <i class="fas fa-rupee-sign"></i> 241
+                                    TAXES &
+                                    FEES
+                                </p>
+                                <p class="day_charge">Per room/night</p>
+                            </a>
+                            <p><a href="javascript:;">Login for more deals</a></p>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="property_box">
+
+                        <div class="property_image_wrapper">
+                            <div class="slider_wrapper">
+                                <img src="https://cdn1.goibibo.com/voy_mmt/t_g/htl-imgs/201412311314381986-e0d893c607f711ebb6060242ac110003.jpg"
+                                    alt="" />
+                            </div>
+                        </div>
+                        <div class="property_details">
+                            <a href="javascript:;">
+                                <div class="top">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>Hotel</span>
+                                    </div>
+                                    <div class="rating_count">
+                                        <span class="rating_badge">4.2/5</span>
+                                        <span class="count">1084 Ratings</span>
+                                    </div>
+                                </div>
+                                <h2 class="hotel_name">Hotel Aman Continental</h2>
+                                <h3 class="area">Patparganj</h3>
+                                <div class="hotel_description">
+                                    <p>Walking Distance From New Delhi Railway Station</p>
+                                    <p>Deluxe Room Free Wi-Fi & 1 Complimentary Snack Basket</p>
+                                    <ul>
+                                        <li>Air Conditioning</li>
+                                        <li>Business Services</li>
+                                        <li>+ More</li>
+                                    </ul>
+                                    <p class="couple">Couple Friendly</p>
+                                    <img src="img/property_banner.png" alt="banner">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="property_price">
+                            <a href="javascript:;">
+                                <h4 class="badge_can">Free Cancellation Till Checkin</h4>
+                                <p class="badge_pimary">Super Deals</p>
+                                <p class="complimentry">Complimentary Room Upgrade</p>
+                                <p class="discount_badge">58% Off</p>
+                                <p class="price"><small><i class="fas fa-rupee-sign"></i> 2532</small> <i
+                                        class="fas fa-rupee-sign"></i> 1060</p>
+                                <p class="tax"><i class="fas fa-plus"></i> <i class="fas fa-rupee-sign"></i> 241
+                                    TAXES &
+                                    FEES
+                                </p>
+                                <p class="day_charge">Per room/night</p>
+                            </a>
+                            <p><a href="javascript:;">Login for more deals</a></p>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <!-- Footer  -->
+    <footer>
+        <div class="custom_container">
+            <div class="footer_quick_links">
+                <div class="quick_links_wrapper">
+
+                    <div class="quick_link_container">
+                        <div class="quick_list">
+                            <h3 class="footer_heading">Fabhotels</h3>
+                            <p><a href="javascript:;">About Us</a></p>
+                            <p><a href="javascript:;">Careers</a></p>
+                            <p><a href="javascript:;">Press</a></p>
+                            <p><a href="javascript:;">Travel Blog</a></p>
+                        </div>
+                        <div class="quick_list">
+                            <h3 class="footer_heading">Partner With Us</h3>
+                            <p><a href="javascript:;">Be our Franchisee</a></p>
+                            <p><a href="javascript:;">Travel Agent</a></p>
+                            <p><a href="javascript:;">Corporate Enquiries</a></p>
+                            <p><a href="javascript:;">Quarantine Hotels</a></p>
+                        </div>
+                        <div class="quick_list">
+                            <h3 class="footer_heading">Policies</h3>
+                            <p><a href="javascript:;">Terms & Conditions</a></p>
+                            <p><a href="javascript:;">Privacy Policy</a></p>
+                            <p><a href="javascript:;">Cancellation Policy</a></p>
+                            <p><a href="javascript:;">FAQs</a></p>
+                        </div>
+                    </div>
+
+                    <div class="secured_section">
+                        <span class="secured_by">SECURED BY <img src="img/geo-trust.png" alt="secured_by"></span>
+                        <span class="we_accept">WE ACCEPT <img src="img/paytm.png" alt="paytm"></span>
+                    </div>
+                </div>
+                <div class="app_details">
+                    <h4 class="app_heading">Download our free app</h4>
+                    <p class="downloads">(1M+ Downloads)</p>
+
+                    <div class="app_wrapper">
+                        <div class="form_container">
+                            <form>
+                                <input type="number" placeholder="Enter Mobile Number" required>
+                                <button><i class="fas fa-arrow-right"></i></button>
+                            </form>
+                            <div class="app_logo">
+                                <img src="img/google-play.png" alt="google play">
+                                <img src="img/app-store.png" alt="app store">
+                            </div>
+                        </div>
+
+                        <div class="qr_code">
+                            <p>Scan to get the link</p>
+                            <img src="img/Qrcode.jpg" alt="qrcode">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer_city_wrapper">
+                <h3 class="footer_heading">Book Our Hotels In All Three Cities</h3>
+                <div class="hotel_city_list_wrapper">
+                    <div class="hotel_city_list">
+                        <p><a href="javascript:;">Hotels Near Me</a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+                    </div>
+
+                    <div class="hotel_city_list">
+                        <p><a href="javascript:;">Hotels Near Me</a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+                    </div>
+
+                    <div class="hotel_city_list">
+                        <p><a href="javascript:;">Hotels Near Me</a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+                    </div>
+
+                    <div class="hotel_city_list">
+                        <p><a href="javascript:;">Hotels Near Me</a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+                    </div>
+
+
+                    <div class="hotel_city_list">
+                        <p><a href="javascript:;">Hotels Near Me</a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+                    </div>
+
+
+                    <div class="hotel_city_list">
+                        <p><a href="javascript:;">Hotels Near Me</a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Kolkata</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Gurgaun</strong></a></p>
+                        <p><a href="javascript:;">Hotels in <strong>Jaipur</strong></a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_summary">
+                <h3 class="footer_heading">FabHotels Is Best Reviewed Hotel Chain In India</h3>
+                <p>We are the fastest growing budget hotel brand in India with over 10,000+ rooms in 600+ hotels
+                    across
+                    50+
+                    cities in India. All our rooms and hotel properties are spacious, stylish, and contemporary, and
+                    are
+                    fitted
+                    with all modern amenities so that you have a relaxed and consistent travel experience. Because
+                    we
+                    believe in
+                    going the extra mile to ensure you have a delightful stay at the best-price, wherever you go.
+                    Most
+                    of our
+                    hotel properties are located close to business hubs or popular tourist sites and easily
+                    accessible
+                    by public
+                    transport, so you don’t have to waste time or money in traveling to your place of business. But
+                    what
+                    makes us
+                    so Fab? Our team of highly enthusiastic and experienced professionals who work around the clock
+                    to
+                    ensure you
+                    get the best sleep after a long day on the road. You don’t have to take our word for it. Just
+                    read
+                    what over
+                    2,000,000+ happy customers have to say. Or better yet, book a stay with us and experience our
+                    services and
+                    hospitality for yourself. Doesn’t matter where you travel to - Whether it’s New Delhi or Ooty.
+                    With
+                    FabHotels,
+                    you will #StayFab, always!</p>
+            </div>
+            <p class="copyright center">&copy; 2020 Casa2 Stays Pvt. Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="mob_dis">
+        <div class="mob_menu_bottom">
+            <a href="/oyo/index.html" class="active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="javascript:;">
+                <i class="fas fa-heart"></i>
+                <span>Saved</span>
+            </a>
+            <a href="javascript:;">
+                <i class="fas fa-briefcase"></i>
+                <span>Bookings</span>
+            </a>
+            <a href="javascript:;">
+                <i class="fas fa-user-plus"></i>
+                <span>Invite & Earn</span>
+            </a>
+            <a href="/oyo/account_details.html">
+                <i class="fas fa-user"></i>
+                <span>Account</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".langauge_selector").click(function () {
+                $(".custom_dropdown").toggleClass("show");
+            });
+            $(".custom_dropdown li").click(function () {
+                $("li").removeClass("active");
+                $(this).addClass("active");
+            });
+            $(".sub_header_list").hover(function () {
+                $(".sub_menu", this).toggle();
+            });
+
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".review_container .owl-carousel").owlCarousel({
+                loop: !0, margin: 10, nav: true, responsive: {
+                    0: { items: 1 },
+                    500: { items: 3 },
+                    600: { items: 4 }, 1000: { items: 4 }
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>
