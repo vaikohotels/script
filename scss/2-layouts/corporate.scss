@@ -10,6 +10,37 @@
     height: 46vh;
     background: linear-gradient(rgba(10, 16, 49, 0.9), rgba(10, 16, 49, 0.9)),
         url(https://static.fabhotels.com/img/main_banner_v1.png);
+    @media (min-width: $break-xsm) and (max-width: $break-sm) {
+        height: auto;
+        padding-top: 40px;
+    }
+
+    @media (min-width: $break-sm-2) and (max-width: $break-md) {
+        height: auto;
+        padding-top: 40px;
+    }
+
+    @media (min-width: $break-md-2) and (max-width: $break-md-3) {
+        height: auto;
+        padding-top: 40px;
+    }
+
+    @media (min-width: $break-lg) and (max-width: $break-lg2) {
+        height: auto;
+    }
+
+    @media (min-width: 1025px) and (max-width: $break-Xlg) {
+        height: auto;
+    }
+
+    @media (min-width: $break-Xlg2) and (max-width: $break-Xlg3) {
+        height: auto;
+    }
+
+    @media (min-width: $break-XXlg) and (max-width: $break-XXlg2) {
+        height: auto;
+    }
+
     .banner_wrapper {
         display: flex;
         justify-content: space-around;
@@ -58,6 +89,30 @@
         .corporate_form {
             flex-basis: 30%;
             width: 30%;
+            @media (min-width: $break-xsm) and (max-width: $break-sm) {
+                flex-basis: 100%;
+                width: 100%;
+            }
+            @media (min-width: $break-sm-2) and (max-width: $break-md) {
+                flex-basis: 100%;
+                width: 100%;
+            }
+            @media (min-width: $break-md-2) and (max-width: $break-md-3) {
+                flex-basis: 50%;
+                width: 50%;
+            }
+            @media (min-width: $break-lg) and (max-width: $break-lg2) {
+                flex-basis: 50%;
+                width: 50%;
+            }
+            @media (min-width: 1025px) and (max-width: $break-Xlg) {
+                flex-basis: 50%;
+                width: 50%;
+            }
+            @media (min-width: $break-Xlg2) and (max-width: $break-Xlg3) {
+                flex-basis: 50%;
+                width: 50%;
+            }
             .form_container {
                 background: $white;
                 padding: 20px 20px 15px;
@@ -98,20 +153,32 @@
     }
 }
 
-.promise_wrapper{
+.promise_wrapper {
     margin-top: 80px;
-    h2{
+    h2 {
         padding: 10px;
     }
-    .promise_section{
+    .promise_section {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        .box{
+        .box {
             padding: 10px;
             flex-basis: calc(30.33% - 20px);
             width: calc(30.33% - 20px);
+            @media (min-width: $break-xsm) and (max-width: $break-sm) {
+                flex-basis: 100%;
+                width: 100%;
+            }
+            @media (min-width: $break-sm-2) and (max-width: $break-md) {
+                flex-basis: 100%;
+                width: 100%;
+            }
+            @media (min-width: $break-md-2) and (max-width: $break-md-3) {
+                flex-basis: calc(25.33% - 20px);
+                width: calc(25.33% - 20px);
+            }
             position: relative;
             margin: {
                 left: 35px;
@@ -119,21 +186,21 @@
                 bottom: 10px;
                 right: 10px;
             }
-            h3{
+            h3 {
                 font-size: 20px;
                 font-weight: 400;
                 line-height: 28px;
                 margin-bottom: 10px;
             }
-            p{
+            p {
                 font-size: 14px;
                 line-height: 20px;
                 letter-spacing: 0.1px;
                 color: #4a4a4a;
             }
-            &:before{
-                content: '\f058';
-                font-family: 'Font Awesome 5 Free';
+            &:before {
+                content: "\f058";
+                font-family: "Font Awesome 5 Free";
                 font-weight: 900;
                 position: absolute;
                 top: 12px;
@@ -145,9 +212,8 @@
     }
 }
 
-
-.cities_wrapper{
-    h2{
+.cities_wrapper {
+    h2 {
         margin-bottom: 12px;
         font-size: 24px;
         font-weight: normal;
@@ -155,18 +221,27 @@
         letter-spacing: 0.1px;
         color: #4a4a4a;
     }
-    .cities_container{
-        ul{
+    .cities_container {
+        ul {
             margin: 0;
             padding: 0;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            li{
+            li {
                 list-style: none;
                 flex-basis: 20%;
                 width: 20%;
-                a{
+                @media (min-width: $break-xsm) and (max-width: $break-sm) {
+                    flex-basis: 50%;
+                    width: 50%;
+                }
+                @media (min-width: $break-sm-2) and (max-width: $break-md) {
+                    flex-basis: 33.33%;
+                    width: 33.33%;
+                }
+                
+                a {
                     font-size: 18px;
                     font-weight: bold;
                     line-height: 24px;
@@ -181,41 +256,44 @@
     }
 }
 
-.partner{
+.partner {
     margin-top: 50px;
-    .image_wrapper{
+    .image_wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
         margin-top: 50px;
         margin-bottom: 50px;
-        .box{
-            background-image: url('../../img/corporate_sprite.png');
+        @media (min-width: $break-sm-2) and (max-width: $break-md) {
+            justify-content: center;
+        }
+        .box {
+            background-image: url("../../img/corporate_sprite.png");
             background-repeat: no-repeat;
             margin-right: 45px;
         }
-        .book_myshow{
+        .book_myshow {
             background-position: 1px 0;
             width: 185px;
             height: 60px;
         }
-        .coke{
+        .coke {
             background-position: -179px 1px;
             width: 145px;
             height: 60px;
         }
-        .delhivery{
+        .delhivery {
             background-position: -109px -53px;
             width: 145px;
             height: 60px;
         }
-        .snapdeal{
+        .snapdeal {
             background-position: 0 -144px;
             width: 151px;
             height: 50px;
         }
-        .ola{
+        .ola {
             background-position: -80px -253px;
             width: 155px;
             height: 60px;
@@ -223,50 +301,107 @@
     }
 }
 
-
-.mini_banner{
+.mini_banner {
     text-align: center;
     margin-bottom: 50px;
-    img{
+    @media (min-width: $break-xsm) and (max-width: $break-sm) {
+        margin-bottom: 20px;
+    }
+    @media (min-width: $break-sm-2) and (max-width: $break-md) {
+        margin-bottom: 20px;
+    }
+    img {
         width: 100%;
     }
 }
 
-.review_section_corporate{
+.review_section_corporate {
     background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
-    url(https://static.fabhotels.com/img/main_banner_v1.png);
+        url(https://static.fabhotels.com/img/main_banner_v1.png);
     height: 40vh;
-    .review_slider_wrapper{        
+    @media (min-width: $break-xsm) and (max-width: $break-sm) {
+        height: auto;
+        padding-top: 30px;
+    }
+    @media (min-width: $break-sm-2) and (max-width: $break-md) {
+        height: auto;
+    }
+    @media (min-width: $break-md-2) and (max-width: $break-md-3) {
+        height: auto;
+        padding-top: 30px;
+    }
+    @media (min-width: $break-lg) and (max-width: $break-lg2) {
+        height: auto;
+        padding-top: 30px;
+    }
+    @media (min-width: 1025px) and (max-width: $break-Xlg) {
+        height: auto;
+        padding-top: 30px;
+    }
+    @media (min-width: $break-Xlg2) and (max-width: $break-Xlg3) {
+        height: auto;
+        padding-top: 30px;
+    }
+    @media (min-width: $break-XXlg) and (max-width: $break-XXlg2) {
+        height: auto;
+        padding-top: 30px;
+    }
+    .review_slider_wrapper {
         height: 100%;
         position: relative;
-        .review_title{
+        .review_title {
             width: 20%;
+            @media (min-width: $break-xsm) and (max-width: $break-sm) {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            @media (min-width: $break-sm-2) and (max-width: $break-md) {
+                width: 100%;
+            }
+            @media (min-width: $break-md-2) and (max-width: $break-md-3) {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+           
             float: left;
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
-            h2{
+            h2 {
                 line-height: 1.2;
                 font-weight: 600;
             }
         }
-        .review_container{
+        .review_container {
             width: 80%;
+            @media (min-width: $break-xsm) and (max-width: $break-sm) {
+                width: 100%;
+            }
+            @media (min-width: $break-sm-2) and (max-width: $break-md) {
+                width: 100%;
+            }
+            @media (min-width: $break-md-2) and (max-width: $break-md-3) {
+                width: 100%;
+            }
+            @media (min-width: 1025px) and (max-width: $break-Xlg) {
+                width: 80%;
+               
+            }
             margin: 0 0 0 auto;
             display: flex;
             align-items: center;
             height: 100%;
-            .item{
+            .item {
                 padding: 10px 10px;
                 background: $white;
-                h4{
+                h4 {
                     color: #3c3c3c;
                     font-size: 12px;
                     line-height: 24px;
                 }
-                .post{
+                .post {
                     font-size: 14px;
                     line-height: 24px;
                     display: block;
@@ -276,13 +411,25 @@
                     margin-bottom: 10px;
                 }
             }
-            .owl-nav{
+            .owl-nav {
                 position: absolute;
                 left: -250px;
                 bottom: 10px;
                 transform: translateX(0px);
                 font-size: 32px;
-                .owl-prev{
+                @media (min-width: $break-lg) and (max-width: $break-lg2) {
+                    display: none;
+                }
+                @media (min-width: 1025px) and (max-width: $break-Xlg) {
+                    display: none;
+                }
+                @media (min-width: $break-Xlg2) and (max-width: $break-Xlg3) {
+                    display: none;
+                }
+                @media (min-width: $break-XXlg) and (max-width: $break-XXlg2) {
+                    display: none;
+                }
+                .owl-prev {
                     width: 50px;
                     height: 50px;
                     border-radius: 100%;
@@ -290,7 +437,7 @@
                     outline: none;
                     margin-right: 10px;
                 }
-                .owl-next{
+                .owl-next {
                     width: 50px;
                     height: 50px;
                     border-radius: 100%;

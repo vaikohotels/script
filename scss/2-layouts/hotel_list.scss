@@ -11,9 +11,21 @@
     background: #eef4fd;
 }
 
+.onscroll_form{
+    @media(min-width: 321px) and (max-width: $break-md){
+        display: none;
+    }
+}
+
 .tabs_container {
     background: rgb(209, 229, 255);
     box-shadow: rgba(0, 0, 0, 0.13) 0px 0.8rem 0.6rem -0.6rem;
+    @media(max-width: 320px){
+        display: none;
+    }
+    @media(min-width: 321px) and (max-width: $break-md){
+        display: none;
+    }
     a {
         display: inline-block;
         padding: 15px 20px;
@@ -35,6 +47,15 @@
         margin-top: 10px;
         margin-bottom: 10px;
         border-radius: 10px;
+        @media(max-width: 320px){
+            display: none;
+        }
+        @media(min-width: 321px) and (max-width: $break-md){
+            display: none;
+        }
+        @media(min-width: $break-md-2) and (max-width: $break-md-3){
+            display: none;
+        }
         h2 {
             font-size: 16px;
             display: flex;
@@ -83,6 +104,15 @@
     .property_wrapper {
         flex: 0 0 78%;
         position: relative;
+        @media(max-width: 320px){
+            flex: 0 0 100%;
+        }
+        @media(min-width: 321px) and (max-width: $break-md){
+            flex: 0 0 100%;
+        }
+        @media(min-width: $break-md-2) and (max-width: $break-md-3){
+            flex: 0 0 100%;
+        }
         .property_box {
             display: flex;
             justify-content: space-between;
@@ -91,8 +121,20 @@
             margin-top: 10px;
             margin-bottom: 10px;
             border-radius: 10px;
+            @media(max-width: 320px){
+                flex-wrap: wrap;
+            }
+            @media(min-width: 321px) and (max-width: $break-md){
+                flex-wrap: wrap;
+            }
             .property_image_wrapper {
                 flex: 0 0 30%;
+                @media(max-width: 320px){
+                    flex: 0 0 100%;
+                }
+                @media(min-width: 321px) and (max-width: $break-md){
+                    flex: 0 0 100%;
+                }
                 .slider_wrapper {
                     img {
                         width: 100%;
@@ -102,6 +144,14 @@
             .property_details {
                 flex: 0 0 44%;
                 padding-left: 20px;
+                @media(max-width: 320px){
+                    flex: 0 0 100%;
+                    padding: 20px 0 0 0;
+                }
+                @media(min-width: 321px) and (max-width: $break-md){
+                    flex: 0 0 100%;
+                    padding: 20px 0 0 0;
+                }
                 a {
                     color: #000;
                     text-decoration: none;
@@ -110,6 +160,12 @@
                         justify-content: space-between;
                         align-items: center;
                         flex-wrap: wrap;
+                        @media(max-width: 320px){
+                            margin: 0 0 10px 0;
+                         }
+                         @media(min-width: 321px) and (max-width: $break-md){
+                            margin: 0 0 10px 0;
+                        }
                         .stars {
                             i {
                                 color: gold;
@@ -117,6 +173,12 @@
                         }
                         .rating_count {
                             margin-right: 10px;
+                            @media(max-width: 320px){
+                                margin: 10px 0 10px 0;
+                             }
+                             @media(min-width: 321px) and (max-width: $break-md){
+                                margin: 10px 0 10px 0;
+                            }
                             .rating_badge {
                                 background: green;
                                 color: #fff;
@@ -149,11 +211,23 @@
                             display: flex;
                             margin: 0;
                             padding: 0;
+                            @media(max-width: 320px){
+                               flex-wrap: wrap;
+                            }
+                            @media(min-width: 321px) and (max-width: $break-md){
+                                flex-wrap: wrap;
+                            }
                             li {
                                 list-style: none;
                                 padding: 0px 8px 0 0;
                                 color: rgb(79, 82, 90);
                                 font-size: 12px;
+                                @media(max-width: 320px){
+                                    width: 100%;
+                                 }
+                                 @media(min-width: 321px) and (max-width: $break-md){
+                                    width: 100%;
+                                }
                                 &::before {
                                     content: "\f058";
                                     font-weight: 600;
@@ -178,11 +252,29 @@
                 flex: 0 0 26%;
                 padding-left: 20px;
                 border-left: 1px solid #ccc;
+                @media(max-width: 320px){
+                    flex: 0 0 100%;
+                    border-left: 1px solid transparent;
+                    padding-left: 0;
+                }
+                @media(min-width: 321px) and (max-width: $break-md){
+                    flex: 0 0 100%;
+                    border-left: 1px solid transparent;
+                    padding-left: 0;
+                }
                 a {
                     text-decoration: none;
                     color: #000;
                     text-align: right;
                     display: block;
+                    @media(max-width: 320px){
+                        text-align: left;
+                        margin: 10px 0 0 0;
+                     }
+                     @media(min-width: 321px) and (max-width: $break-md){
+                        text-align: left;
+                        margin: 10px 0 0 0;
+                    }
                     .badge_can {
                         font-size: 12px;
                         text-align: right;

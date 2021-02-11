@@ -11,6 +11,25 @@
 .blog_banner{
     .blog_details_banner{
         position: relative;
+        .banner_content{
+            position: absolute;
+            bottom: 20px;
+            color: #fff;
+            z-index: 99;
+            .posted_date{
+                font-size: 12px;
+                margin-bottom: 1 0px;
+                display: block;
+            }
+            .banner_heading{
+                font-size: 36px;
+                font-weight: 600;
+            }
+            .posted_by{
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        }
         img{
             width: 100%;
             height: 400px;
