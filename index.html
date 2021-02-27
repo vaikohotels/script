@@ -143,7 +143,7 @@
         <div class="mob_logo"><img src="img/logo-white.png" alt="logo" /></div>
         <div class="login_call">
           <a href="javascript:;"><i class="fas fa-phone"></i></a>
-          <a href="javascript:;" class="mob_login">Login</a>
+          <a href="javascript:;" data-toggle="modal" data-target="#exampleModal" class="mob_login">Login</a>
         </div>
       </div>
       <div class="mob_header_body">
@@ -375,7 +375,7 @@
       </div>
     </div>
     <div class="onscroll_login">
-      <a href="javascript:;"><i class="far fa-user-circle"></i> Login / Signup</a>
+      <a href="javascript:;" data-toggle="modal" data-target="#exampleModal"><i class="far fa-user-circle"></i> Login / Signup</a>
     </div>
   </div>
 
@@ -398,7 +398,7 @@
               <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" class="form-control" />
             </div>
             <div class="form-group guest">
-              <input type="text" class="form-control" id="guest_show" value="1 Room, 1 Guest" readonly />
+              <input type="text" class="form-control" id="guest_show" value="1 Room" readonly />
 
               <div class="guest_wrapper">
 
@@ -410,10 +410,11 @@
                   <div class="gues_container">
                     <p>Room 1</p>
                     <p><span class="less">-</span> <span class="value">1</span> <span class="add">+</span></p>
-                    <p><span class="del">-</span></p>
+                    <!-- <p><span class="del">-</span></p> -->
                   </div>
                 </div>
                 <div class="guest_foot">
+                  <span class="del_room">- Delete Room</span>
                   <span class="add_room">+ Add Room</span>
                 </div>
 
@@ -956,28 +957,28 @@
 
   <div class="mob_dis">
     <div class="mob_menu_bottom">
-        <a href="/oyo/index.html" class="active">
-            <i class="fas fa-home"></i>
-            <span>Home</span>
-        </a>
-        <a href="javascript:;">
-            <i class="fas fa-heart"></i>
-            <span>Saved</span>
-        </a>
-        <a href="javascript:;">
-            <i class="fas fa-briefcase"></i>
-            <span>Bookings</span>
-        </a>
-        <a href="javascript:;">
-            <i class="fas fa-user-plus"></i>
-            <span>Invite &  Earn</span>
-        </a>
-        <a href="/oyo/account_details.html">
-            <i class="fas fa-user"></i>
-            <span>Account</span>
-        </a>
+      <a href="/oyo/index.html" class="active">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="javascript:;">
+        <i class="fas fa-heart"></i>
+        <span>Saved</span>
+      </a>
+      <a href="javascript:;">
+        <i class="fas fa-briefcase"></i>
+        <span>Bookings</span>
+      </a>
+      <a href="javascript:;">
+        <i class="fas fa-user-plus"></i>
+        <span>Invite & Earn</span>
+      </a>
+      <a href="/oyo/account_details.html">
+        <i class="fas fa-user"></i>
+        <span>Account</span>
+      </a>
     </div>
-</div>
+  </div>
 
 
   <div class="login_popup">
@@ -1047,33 +1048,8 @@
   <script src="js/owl.carousel.min.js"></script>
   <script type="text/javascript" src="js/moment.min.js"></script>
   <script type="text/javascript" src="js/daterangepicker.min.js"></script>
+  <script src="js/add_room.js"></script>
   
-  <script>
-    $(document).ready(function () {
-      $('.add').click(function () {
-        one = $('.value').html();
-        get_num = Number(one) + 1;
-        $('.value').html(get_num);
-      });
-      $('.less', this).click(function () {
-        one = $('.value').html();
-        get_num = Number(one) - 1;
-        $('.value').html(get_num);
-        if (one <= 0) {
-          $('.value').html(0)
-        }
-      });
-    });
-  </script>
-  <script>
-    $(document).ready(function () {
-      $('.add_room').click(function () {
-        $('.guest_body').append(
-          '<div class="gues_container"><p>Room 1</p><p><span class="less">-</span> <span class="value">1</span> <span class="add">+</span></p><p><span class="del">-</span></p></div>',
-        )
-      });
-    })
-  </script>
   <script>
     $(function () {
       $('input[name="daterange"]').daterangepicker({
@@ -1084,13 +1060,7 @@
       });
     });
   </script>
-  <script>
-    $(document).ready(function () {
-      $('#guest_show').click(function () {
-        $('.guest_wrapper').toggle();
-      })
-    })
-  </script>
+
   <script>
     $('.onscroll_form').hide();
     $(window).scroll(function () {
@@ -1119,18 +1089,29 @@
     });
   </script>
   <script>
-    $(document).ready(function () { $(".hotels_list .owl-carousel").owlCarousel({ loop: !0, margin: 10, nav: !0, responsive: { 
-      0: { items: 1 }, 
-      500: { items: 2 }, 
-      600: { items: 3 }, 1000: { items: 4 } } }) });
+    $(document).ready(function () {
+      $(".hotels_list .owl-carousel").owlCarousel({
+        loop: !0, margin: 10, nav: !0, responsive: {
+          0: { items: 1 },
+          500: { items: 2 },
+          600: { items: 3 }, 1000: { items: 4 }
+        }
+      })
+    });
   </script>
   <script>
-    $(document).ready(function () { $(".oyo_list .owl-carousel").owlCarousel({ loop: !0, margin: 10, nav: !0, responsive: { 0: { items: 1 },
-    500: { items: 2 },
-    600: { items: 1 }, 1000: { items: 3 } } }) });
+    $(document).ready(function () {
+      $(".oyo_list .owl-carousel").owlCarousel({
+        loop: !0, margin: 10, nav: !0, responsive: {
+          0: { items: 1 },
+          500: { items: 2 },
+          600: { items: 1 }, 1000: { items: 3 }
+        }
+      })
+    });
   </script>
   <script>
-    $(document).ready(function () { $(".quick_hotel_search .owl-carousel").owlCarousel({ loop: !0, margin: 10, nav: !0, responsive: { 0: { items: 1 },  500: { items: 2 }, 600: { items: 3 }, 1000: { items: 6 } } }) });
+    $(document).ready(function () { $(".quick_hotel_search .owl-carousel").owlCarousel({ loop: !0, margin: 10, nav: !0, responsive: { 0: { items: 1 }, 500: { items: 2 }, 600: { items: 3 }, 1000: { items: 6 } } }) });
   </script>
   <script>
     function getLocation() {
@@ -1147,7 +1128,7 @@
       console.log(x)
     }
   </script>
-  
+
 </body>
 
 </html>
