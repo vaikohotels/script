@@ -156,9 +156,11 @@
             </div>
             <div class="date_guest_container">
               <div class="mob_date">
+                <span>Check In - Check Out</span>
                 <input type="text" name="daterange" />
               </div>
               <div class="guest_sellect">
+                <span>Guest</span>
                 <select value="">
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -347,11 +349,26 @@
                 src="img/target.png" alt="target"> Near me</span></div>
         </div>
         <div class="onscroll_range">
-          <input type="text" name="daterange" value="01/01/2018 - 01/15/2018">
+          <input type="text" name="daterange"  value="01/01/2018 - 01/15/2018">
         </div>
         <div class="onscroll_guest">
-          <input type="text" value="" readonly />
-
+          <input type="text" value="1 Room" id="guest_show_2" readonly />
+          <div class="guest_wrapper_2">
+            <div class="guest_header_2">
+              <span>Rooms</span>
+              <span>Guest</span>
+            </div>
+            <div class="guest_body_2">
+              <div class="gues_container_2">
+                <p>Room 1</p> 
+                <p><span class="less_2">-</span> <span class="value_2">1</span> <span class="add_2">+</span></p>
+              </div>
+            </div>
+            <div class="guest_foot_2">
+              <span class="del_room_2">- Delete Room</span>
+              <span class="add_room_2">+ Add Room</span>
+            </div>
+          </div>
         </div>
         <div class="onscroll_submit">
           <button class="btn btn-primary">Search</button>
@@ -410,7 +427,6 @@
                   <div class="gues_container">
                     <p>Room 1</p>
                     <p><span class="less">-</span> <span class="value">1</span> <span class="add">+</span></p>
-                    <!-- <p><span class="del">-</span></p> -->
                   </div>
                 </div>
                 <div class="guest_foot">
