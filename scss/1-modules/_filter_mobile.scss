@@ -1,0 +1,49 @@
+.filter_mobile_wrapper{
+    button{
+        position: fixed;
+        bottom: 80px;
+        right: 10px;
+        background: #FF4E63;
+        color: #fff;
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        border: none;
+    }
+}
+
+
+.mobile_filter{
+    .modal-body{
+        padding: 0px;
+        form{
+            .filter_container{
+                .filter_header{
+                    background: #FF4E63;
+                    padding: 10px;
+                    color: $white;
+                    font-size: 17px;
+                    font-weight: 600;
+                }
+                .fiter_body{
+                    padding: 10px;
+                    .field_wrapper{
+                        input{
+
+                        }
+                        span{
+                            .fa-star{
+                                color: gold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .btn-primary{
+        background: #FF4E63;
+        color: $white;
+        border: 1px solid transparent;
+    }
+}

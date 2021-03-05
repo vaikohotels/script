@@ -6,6 +6,7 @@
 @import "../1-modules/mob_menu_bottom";
 @import "../1-modules/bottom_banner";
 @import "../1-modules/onscroll_form";
+@import "../1-modules/filter_mobile";
 
 .main_container_hotel_list {
     background: #eef4fd;
@@ -36,7 +37,7 @@
         color: rgb(70, 72, 77);
     }
 }
-
+ 
 .property_list_wrapper {
     display: flex;
     justify-content: space-between;
