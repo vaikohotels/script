@@ -38,6 +38,12 @@
         @media (max-width: $break-xsm) {
             flex: 0 0 100%;
         }
+        @media (min-width: 321px) and (max-width: $break-sm) {
+            flex: 0 0 100%;
+        }
+        @media (min-width: $break-sm-2) and (max-width: $break-md) {
+            flex: 0 0 100%;
+        }
         h2 {
             font-size: $font-22;
             font-weight: bold;
@@ -55,16 +61,49 @@
                         flex-wrap: wrap;
                         .hotel_image {
                             flex: 0 0 10%;
+                            @media (max-width: $break-xsm) {
+                                flex: 0 0 100%;
+                            }
+                            @media (min-width: 321px) and (max-width: $break-sm) {
+                                flex: 0 0 100%;
+                            }
+                            @media (min-width: $break-sm-2) and (max-width: $break-md) {
+                                flex: 0 0 100%;
+                            }
                             img {
                                 width: 139px;
                                 height: 100px;
                                 object-fit: cover;
                                 border-radius: 1.2rem;
+                                @media (max-width: $break-xsm) {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                                @media (min-width: 321px) and (max-width: $break-sm) {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                                @media (min-width: $break-sm-2) and (max-width: $break-md) {
+                                    width: 100%;
+                                    height: auto;
+                                }
                             }
                         }
                         .hotel_name {
                             flex: 0 0 80%;
                             padding: 0px 20px;
+                            @media (max-width: $break-xsm) {
+                                flex: 0 0 100%;
+                                margin: 20px 0 0 0;
+                            }
+                            @media (min-width: 321px) and (max-width: $break-sm) {
+                                flex: 0 0 100%;
+                                margin: 20px 0 0 0;
+                            }
+                            @media (min-width: $break-sm-2) and (max-width: $break-md) {
+                                flex: 0 0 100%;
+                                margin: 20px 0 0 0;
+                            }
                             h4 {
                                 font-weight: bold;
                                 font-size: $font-20;
@@ -280,6 +319,12 @@
         position: relative;
         top: -100px;
         @media (max-width: $break-xsm) {
+            flex: 0 0 100%;
+        }
+        @media (min-width: 321px) and (max-width: $break-sm) {
+            flex: 0 0 100%;
+        }
+        @media (min-width: $break-sm-2) and (max-width: $break-md) {
             flex: 0 0 100%;
         }
         h2 {
