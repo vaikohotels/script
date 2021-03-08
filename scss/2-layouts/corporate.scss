@@ -47,6 +47,12 @@
         align-items: center;
         flex-wrap: wrap;
         .corporate_left_content {
+            @media (max-width: $break-xsm) {
+                text-align: center;
+            }
+            @media (min-width: 321px) and (max-width: $break-sm) {
+                text-align: center;
+            }
             h1 {
                 font-size: 18px;
                 font-weight: bold;
@@ -63,8 +69,17 @@
             .corporate_count {
                 display: flex;
                 align-items: center;
+                @media (max-width: $break-xsm) {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                @media (min-width: 321px) and (max-width: $break-sm) {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
                 div {
                     margin-right: 20px;
+                    margin-top: 15px;
                     p {
                         background-color: #fff6c8;
                         padding: 10px;
@@ -232,10 +247,15 @@
                 list-style: none;
                 flex-basis: 20%;
                 width: 20%;
-                @media (min-width: $break-xsm) and (max-width: $break-sm) {
+                @media (max-width: $break-xsm) {
+                    flex-basis: 100%;
+                    width: 100%;
+                }
+                @media (min-width: 321px) and (max-width: $break-sm) {
                     flex-basis: 50%;
                     width: 50%;
                 }
+                
                 @media (min-width: $break-sm-2) and (max-width: $break-md) {
                     flex-basis: 33.33%;
                     width: 33.33%;
