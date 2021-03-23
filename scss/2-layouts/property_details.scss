@@ -272,6 +272,7 @@
     position: sticky;
     background: #fff;
     top: 77px;
+    z-index: 99;
     @media (max-width: $break-xsm) {
         display: none;
     }
@@ -452,6 +453,91 @@
                 color: #fff;
                 font-weight: 600;
                 font-size: 14px;
+            }
+        }
+    }
+}
+
+
+
+.quick_hotel_search {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    @media (max-width: $break-sm) {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    @media (min-width: $break-sm-2) and (max-width: $break-md) {
+        margin-top: 50px;
+        margin-bottom: 80px;
+    }
+    .area_hotel_search {
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(30, 37, 74, 0.01), rgb(30, 37, 74));
+        }
+        a {
+            img {
+                border-radius: 5px;
+            }
+            .area_hotel_content {
+                position: absolute;
+                bottom: 0;
+                padding: 13px;
+                left: 0;
+                right: 0;
+                h3 {
+                    color: $white;
+                }
+                .avg_heading {
+                    color: $white;
+                }
+                .avg_amount {
+                    color: $white;
+                }
+            }
+        }
+    }
+    .owl-nav {
+        .owl-prev {
+            position: absolute;
+            left: -25px;
+            top: 47%;
+            font-size: 50px !important;
+            background: $white !important;
+            box-shadow: rgba(0, 0, 0, 0.2) -4px 3px 4px;
+            width: 50px;
+            border-radius: 100%;
+            height: 50px;
+            transform: translateY(-70%);
+            outline: none;
+            span {
+                position: relative;
+                top: -16px;
+                left: -3px;
+            }
+        }
+        .owl-next {
+            position: absolute;
+            right: -25px;
+            top: 50%;
+            font-size: 50px !important;
+            background: $white !important;
+            box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 4px;
+            width: 50px;
+            border-radius: 100%;
+            height: 50px;
+            transform: translateY(-70%);
+            outline: none;
+            span {
+                position: relative;
+                top: -15px;
+                left: 2px;
             }
         }
     }

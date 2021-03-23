@@ -158,18 +158,26 @@
 
                 <div class="booking_profile_container">
                     <div class="box profile_details">
-                        <h2>Edit profile <a href="javascript:;"><i class="fas fa-pencil-alt"></i></a></h2>
-                        <h3>Full Name</h3>
-                        <p>Aman Verma</p>
-                        <h3>Phone Number</h3>
-                        <p>+91 8800366374</p>
-                        <h3>Email Address</h3>
-                        <p>softtechvrm@gmail.com</p>
+                        <form>
+                            <h2>Edit profile <a href="javascript:;"><i class="fas fa-pencil-alt"></i></a></h2>
+                            <h3>Full Name</h3>
+                            <p>Aman Verma</p>
+                            <input type="text" name="" value="Aman Verma" />
+                            <h3>Phone Number</h3>
+                            <p>+91 8800366374</p>
+                            <input type="text" name="" value="8800366374" />
+                            <h3>Email Address</h3>
+                            <p>softtechvrm@gmail.com</p>
+                            <input type="text" name="" value="softtechvrm@gmail.com" />
+                        </form>
                     </div>
                     <div class="box change_password">
-                        <h2>Change password <a href="javascript:;"><i class="fas fa-pencil-alt"></i></a></h2>
-                        <p>Current Password</p>
-                        <p>***********</p>
+                        <form>
+                            <h2>Change password <a href="javascript:;"><i class="fas fa-pencil-alt"></i></a></h2>
+                            <p>Current Password</p>
+                            <p>***********</p>
+                            <input type="text" name="" value="test" />
+                        </form>
                     </div>
                 </div>
 
@@ -371,7 +379,7 @@
             </a>
             <a href="javascript:;">
                 <i class="fas fa-user-plus"></i>
-                <span>Invite &  Earn</span>
+                <span>Invite & Earn</span>
             </a>
             <a href="/oyo/account_details.html">
                 <i class="fas fa-user"></i>
@@ -385,6 +393,24 @@
     <script src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/daterangepicker.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.profile_details input').hide();
+            $('.profile_details i').click(function () {
+                $('.profile_details input').toggle();
+            })
+        })
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.change_password input').hide();
+            $('.change_password i').click(function () {
+                $('.change_password input').toggle();
+            })
+        })
+    </script>
+
 </body>
 
 </html>

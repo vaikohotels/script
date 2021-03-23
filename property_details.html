@@ -210,20 +210,20 @@
 
     <div class="property_nav">
         <div class="custom_container">
-            <a href="javascript:;" class="links active">Safty & Hygiene</a>
-            <a href="javascript:;" class="links">Room options</a>
-            <a href="javascript:;" class="links">Amenities</a>
-            <a href="javascript:;" class="links">Guest Reviews</a>
-            <a href="javascript:;" class="links">Hotel Policies</a>
-            <a href="javascript:;" class="links">Location</a>
-            <a href="javascript:;" class="links">About Property</a>
-            <a href="javascript:;" class="links">Similar Hotel</a>
+            <a href="#saftey" class="links active scrollTo">Safty & Hygiene</a>
+            <a href="#room_option" class="links scrollTo">Room options</a>
+            <a href="#amenities" class="links scrollTo">Amenities</a>
+            <a href="#guest" class="links scrollTo">Guest Reviews</a>
+            <a href="#hotel" class="links scrollTo">Hotel Policies</a>
+            <a href="#location" class="links scrollTo">Location</a>
+            <a href="#about" class="links scrollTo">About Property</a>
+            <a href="#similar_hotel" class="links scrollTo">Similar Hotel</a>
         </div>
     </div>
 
     <div class="content_section_wrapper">
         <div class="custom_container">
-            <div class="custom_card">
+            <div class="custom_card" id="saftey">
                 <div class="card_head">
                     <h2>Safety and Hygiene</h2>
                 </div>
@@ -244,7 +244,7 @@
             </div>
         </div>
 
-        <div class="amenities">
+        <div class="amenities" id="amenities">
             <div class="custom_container">
                 <div class="custom_card">
                     <div class="card_head">
@@ -309,7 +309,7 @@
 
 
         <div class="custom_container">
-            <div class="custom_card">
+            <div class="custom_card" id="about">
                 <div class="card_head">
                     <h3>About Property</h3>
                 </div>
@@ -361,7 +361,7 @@
         <div class="map">
             <div class="custom_container">
                 <div class="custom_card">
-                    <div class="card_head">
+                    <div class="card_head" id="location">
                         <h3>Location</h3>
                     </div>
                     <div class="card_body">
@@ -407,7 +407,7 @@
 
 
         <div class="custom_container">
-            <div class="guest_reviews">
+            <div class="guest_reviews" id="guest">
                 <div class="custom_card">
                     <div class="card_head">
                         <h3>Guest Reviews & Rating</h3>
@@ -472,24 +472,60 @@
         <div class="custom_container">
             <div class="guest_reviews">
                 <div class="custom_card">
-                    <div class="card_head">
+                    <div class="card_head" id="hotel">
                         <h3>Hotel Policies</h3>
                     </div>
                     <div class="card_body">
 
-                        <p>According to government regulations, a valid Photo ID has to be carried by every person above the age of 18 staying at Country Inn & Suites by Radisson, Candolim Goa. The identification proofs accepted are Drivers License, Voters Card, Passport, Ration Card. Without valid ID the guest will not be allowed to check in.</p>
+                        <p>According to government regulations, a valid Photo ID has to be carried by every person above
+                            the age of 18 staying at Country Inn & Suites by Radisson, Candolim Goa. The identification
+                            proofs accepted are Drivers License, Voters Card, Passport, Ration Card. Without valid ID
+                            the guest will not be allowed to check in.</p>
 
 
                         <p>The primary guest checking in to the hotel must be at least 18 years of age.</p>
 
-                        <p>The standard check-in time is 1400 and the standard check-out time is 1100. After booking you will be sent an email confirmation with hotel phone number. You can contact the hotel directly for early check-in or late check-out. Early check-in or late check-out is subject to availability and may be chargeable by Country Inn & Suites by Radisson, Candolim Goa.</p>
+                        <p>The standard check-in time is 1400 and the standard check-out time is 1100. After booking you
+                            will be sent an email confirmation with hotel phone number. You can contact the hotel
+                            directly for early check-in or late check-out. Early check-in or late check-out is subject
+                            to availability and may be chargeable by Country Inn & Suites by Radisson, Candolim Goa.</p>
 
-                        <p>This is a couple friendly property. Unmarried/Unrelated couples are allowed to check-in. Local Ids can be presented as proof of identification. Final rights of admission/check-in remain reserved with the hotel management & refund can be denied in-case any misconduct is observed by the hotel management.</p>
+                        <p>This is a couple friendly property. Unmarried/Unrelated couples are allowed to check-in.
+                            Local Ids can be presented as proof of identification. Final rights of admission/check-in
+                            remain reserved with the hotel management & refund can be denied in-case any misconduct is
+                            observed by the hotel management.</p>
 
 
-                        <p>The room tariff includes all taxes. The amount paid for the room does not include charges for optional services and facilities (such as room service, mini bar, snacks or telephone calls). These will be charged by the hotel at the time of check-out from the hotel.</p>
+                        <p>The room tariff includes all taxes. The amount paid for the room does not include charges for
+                            optional services and facilities (such as room service, mini bar, snacks or telephone
+                            calls). These will be charged by the hotel at the time of check-out from the hotel.</p>
 
                     </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="custom_container">
+            <div class="quick_hotel_search" id="similar_hotel">
+                <h2 class="title_heading">Quick Hotel Search</h2>
+                <div class="owl-carousel owl-theme">
+
+                    <div class="item">
+                        <div class="area_hotel_search">
+                            <a href="javascript:;">
+                                <img src="img/bangalore.jpg" alt="banglore">
+                                <div class="area_hotel_content">
+                                    <h3>Bangalore</h3>
+                                    <span class="avg_heading">Avg. Price: </span> <span class="avg_amount"><i
+                                            class="fas fa-rupee-sign"></i> 1499</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
         </div>
@@ -678,6 +714,10 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function () { $(".quick_hotel_search .owl-carousel").owlCarousel({ loop: !0, margin: 10, nav: !0, responsive: { 0: { items: 1 }, 500: { items: 2 }, 600: { items: 3 }, 1000: { items: 6 } } }) });
+    </script>
     <script>
         $(document).ready(function () {
             $(".langauge_selector").click(function () {
@@ -693,6 +733,19 @@
 
         });
     </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".scrollTo").on('click', function (e) {
+                e.preventDefault();
+                var target = $(this).attr('href');
+                $('html, body').animate({
+                    scrollTop: ($(target).offset().top) - 200
+                }, 2000);
+            });
+        });
+    </script>
+
 
 </body>
 

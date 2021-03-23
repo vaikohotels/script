@@ -292,6 +292,14 @@
             background-image: url("../../img/corporate_sprite.png");
             background-repeat: no-repeat;
             margin-right: 45px;
+            @media (max-width: $break-xsm) {
+                margin-right: 0;
+                margin: 10px auto;
+            }
+            @media (min-width: 321px) and (max-width: $break-sm) {
+                margin-right: 0;
+                margin: 10px auto;
+            }
         }
         .book_myshow {
             background-position: 1px 0;
